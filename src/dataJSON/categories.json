@@ -1,0 +1,14 @@
+[
+    {
+        "categoryId": "cat_1",
+        "title": "shelters"
+    },
+    {
+        "categoryId": "cat_2",
+        "title": "clinics"
+    },
+    {
+        "categoryId": "cat_3",
+        "title": "colobaration"
+    }
+]
