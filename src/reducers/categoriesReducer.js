@@ -1,8 +1,8 @@
-import dataCategories from '../dataJSON/categories.json'
+import dataCategories from '../dataJSON/categories'
 
 const INIT_STATE = {
     dataCategories
-};
+}
 
 export default (state = INIT_STATE, action) => {
     switch (action.type) {

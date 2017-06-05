@@ -1,9 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { connect } from 'react-redux'
-
 import Categories from '../src/components/Categories'
-import ReduxExample from '../src/components/ReduxExample'
 
 
 class HomeScreen extends React.Component {

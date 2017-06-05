@@ -6,7 +6,10 @@ const styles = {
     viewStyle: {
         justifyContent: 'flex-start',
         flexDirection: 'row',
-        position: 'relative'
+        // position: 'relative',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: '#d6d7da'
     },
     imageStyle: {
         height: 200,
