@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Router, Scene } from 'react-native-router-flux'
-import HomeScene from '../scenes/HomeScene'
 
+// components
+import Categories from './components/Categories'
+import AnimalsList from './components/AnimalsList'
 
-class Routes extends React.Component {
+class Routes extends Component {
     render() {
         return (
             <Router sceneStyle={{ paddingTop: 54 }}>
@@ -14,8 +16,17 @@ class Routes extends React.Component {
                     barButtonTextStyle={styles.barButtonTextStyle}
                     barButtonIconStyle={styles.barButtonIconStyle}
                     titleStyle={styles.titleStyle}
-                    component={HomeScene}
+                    component={Categories}
                     title='Menu'
+                />
+                <Scene
+                    key='blog'
+                    navigationBarStyle={styles.navigationBarStyle}
+                    barButtonTextStyle={styles.barButtonTextStyle}
+                    barButtonIconStyle={styles.barButtonIconStyle}
+                    titleStyle={styles.titleStyle}
+                    component={AnimalsList}
+                    title='blog'
                 />
             </Router>
         );

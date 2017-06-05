@@ -26,7 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Categories />
+        <Routes />
       </Provider>
     );
   }
