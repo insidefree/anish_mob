@@ -1,0 +1,16 @@
+*** Start the Emulator from the Command Line
+https://developer.android.com/studio/run/emulator-commandline.html
+
+emulator -list-avds
+emulator -avd avd_name
+work_comp_win7: C:\Users\denys-s\AppData\Local\Android\sdk\emulator
+
+***
+Windows 7
+C:\Users\denys-s\AppData\Local\Android\sdk\emulator
+
+***
+Android Studio Settings
+
+# another link to react-native-navigation -> andriod
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
