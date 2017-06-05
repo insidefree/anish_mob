@@ -1,26 +1,34 @@
 [
     {
         "categoryId": "cat_1",
-        "title": "shelters"
+        "title": "Shelters"
     },
     {
         "categoryId": "cat_2",
-        "title": "clinics"
+        "title": "Veterinary clinics"
     },
     {
         "categoryId": "cat_3",
-        "title": "colobaration"
+        "title": "Colobaration"
     },
     {
         "categoryId": "cat_4",
-        "title": "colobaration"
+        "title": "Chat"
     },
     {
         "categoryId": "cat_5",
-        "title": "colobaration"
+        "title": "Funny moments"
     },
     {
         "categoryId": "cat_6",
-        "title": "colobaration"
+        "title": "Quiz"
+    },
+    {
+        "categoryId": "cat_7",
+        "title": "Interesting facts"
+    },
+    {
+        "categoryId": "cat_8",
+        "title": "Top users"
     }
 ]
