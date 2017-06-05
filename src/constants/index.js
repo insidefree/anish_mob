@@ -1,0 +1,1 @@
+export const CHOICE_CATEGORY = 'CHOICE_CATEGORY'

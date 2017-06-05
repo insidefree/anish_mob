@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { View, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
+import { View, ScrollView } from 'react-native'
+
+// components
 import Category from '../components/common/Category'
 
 

@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import { Actions } from 'react-native-router-flux'
+
+//components
 import { View, Text, TouchableWithoutFeedback } from 'react-native'
 
+//actions
+import { choiceCategory } from '../../actions'
 
 const styles = {
     viewStyle: {
@@ -38,15 +43,19 @@ const styles = {
 export default class Category extends Component {
     render() {
         const { backdropView, headline, viewStyle } = styles;
+        const { categoryId } = this.props
         console.log(this.props);
         return (
-            <TouchableWithoutFeedback style={{ flex: 1 }} onPress={() => console.log(this.props.categoryId)}>
+            <TouchableWithoutFeedback
+                style={{ flex: 1 }}
+                onPress={() => {
+                    console.log(categoryId)
+                }}
+            >
                 <View style={viewStyle}>
-                    {/*<Image style={imageStyle} source={{ uri: image }}>*/}
                     <View style={backdropView}>
                         <Text style={headline}>{this.props.children}</Text>
                     </View>
-                    {/*</Image>*/}
                 </View>
             </TouchableWithoutFeedback>
         )
