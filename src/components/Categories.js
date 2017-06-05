@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { View, ScrollView } from 'react-native'
+import { connect } from 'react-redux'
 import Category from '../components/common/Category'
 
 
@@ -12,12 +13,19 @@ const styles = {
 }
 
 
-export default class Categories extends Component {
+class Categories extends Component {
     render() {
         return (
-            <ScrollView style={styles.container}>
-                {this.props.data.map(el => <Category key={el.categoryId} {...el}>{el.title}</Category>)}
-            </ScrollView>
+            <View style={{ flex: 1 }}>
+                <ScrollView style={styles.container}>
+                    {this.props.categories.map(el => <Category key={el.categoryId} {...el}>{el.title}</Category>)}
+                </ScrollView>
+            </View>
         )
     }
 }
+const mapStateToProps = state => ({
+    categories: state.categories.dataCategories
+})
+
+export default connect(mapStateToProps)(Categories)

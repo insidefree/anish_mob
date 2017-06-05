@@ -2,7 +2,8 @@ import Expo from 'expo';
 import React from 'react';
 import { Provider } from 'react-redux'
 import store from './src/store'
-import HomeScene from './scenes/HomeScene'
+// import HomeScene from './scenes/HomeScene'
+import Categories from './src/components/Categories'
 import firebase from 'firebase'
 import Routes from './src/Routes'
 
@@ -25,7 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <HomeScene />
+        <Categories />
       </Provider>
     );
   }
