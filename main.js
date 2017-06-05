@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux'
 import store from './src/store'
 import HomeScreen from './screens/HomeScreen'
+import firebase from 'firebase'
 
 class App extends React.Component {
 
