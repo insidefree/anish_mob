@@ -8,7 +8,7 @@ import AnimalsList from './components/AnimalsList'
 class Routes extends Component {
     render() {
         return (
-            <Router sceneStyle={{ paddingTop: 54 }}>
+            <Router sceneStyle={{ paddingTop: 60 }}>
                 <Scene
                     key='categories'
                     initial

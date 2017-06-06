@@ -64,10 +64,7 @@ class Category extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    categoryID: state.choicedCategory.choiceCategory
-})
 
-export default connect(mapStateToProps, {
+export default connect(null, {
     choiceCategory
 })(Category)

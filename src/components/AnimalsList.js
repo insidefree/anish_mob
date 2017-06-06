@@ -1,18 +1,24 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { View, Text } from 'react-native'
 
 
-export default class AnimalsList extends Component {
+
+class AnimalsList extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{ flex: 1 }}>
                 <Text>
-                    Animal AnimalsList
-                    dsfdsfsafsdf
+                    {this.props.categoryID}
                 </Text>
             </View>
         );
     }
 }
+
+const mapStateToProps = state => ({
+    categoryID: state.choicedCategory.choiceCategory
+})
+
+export default connect(mapStateToProps)(AnimalsList)
