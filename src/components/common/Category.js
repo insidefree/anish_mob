@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Actions } from 'react-native-router-flux'
 
 //components
@@ -40,16 +41,17 @@ const styles = {
 };
 
 
-export default class Category extends Component {
+class Category extends Component {
     render() {
         const { backdropView, headline, viewStyle } = styles;
         const { categoryId } = this.props
-        console.log(this.props);
+        // console.log(this.props.categoryID)
         return (
             <TouchableWithoutFeedback
                 style={{ flex: 1 }}
                 onPress={() => {
-                    console.log(categoryId)
+                    this.props.choiceCategory(categoryId)
+                    Actions.blog()
                 }}
             >
                 <View style={viewStyle}>
@@ -61,3 +63,11 @@ export default class Category extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    categoryID: state.choicedCategory.choiceCategory
+})
+
+export default connect(mapStateToProps, {
+    choiceCategory
+})(Category)
