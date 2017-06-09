@@ -13,5 +13,8 @@
     "react-native-router-flux": "^3.39.2",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "axios": "^0.16.2"
   }
 }
