@@ -18,7 +18,8 @@ class AnimalsList extends Component {
 }
 
 const mapStateToProps = state => ({
-    categoryID: state.choicedCategory.choiceCategory
+    categoryID: state.choicedCategory.choiceCategory,
+    animals: state.animals
 })
 
 export default connect(mapStateToProps)(AnimalsList)

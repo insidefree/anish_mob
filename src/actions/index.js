@@ -1,5 +1,6 @@
 import firebase from 'firebase'
 import dog from '../dataJSON/dogsData'
+import animals from '../dataJSON/animals'
 import {
     CHOICE_CATEGORY,
     CHOICE_SUB_CATEGORIES
@@ -11,7 +12,18 @@ export const choiceCategory = categoryID => ({
     payload: categoryID
 })
 
-export const choiceSubCategories = subCategoryIDs => ({
-    type: CHOICE_SUB_CATEGORIES,
-    payload: subCategoryIDs
-}) 
+export const loadCategoriesByID = categoryID => {
+    switch (categoryID) {
+        case "cat_1":
+            return {
+                type: CHOICE_SUB_CATEGORIES,
+                payload: animals
+            }
+        default:
+            return {
+                type: CHOICE_SUB_CATEGORIES,
+                payload: []
+            }
+    }
+
+}
