@@ -1,0 +1,44 @@
+[
+    {
+        "id": "cat_1",
+        "sub_id": "sub_cat_id_1",
+        "images": [],
+        "description": "description sub_cat_id_1",
+        "location": {
+            "city": "tel-aviv",
+            "street": "Rotshild",
+            "position": {
+                "lng": "lng",
+                "lat": "lat"
+            }
+        }
+    },
+    {
+        "id": "cat_1",
+        "sub_id": "sub_cat_id_2",
+        "images": [],
+        "description": "description sub_cat_id_2",
+        "location": {
+            "city": "tel-aviv",
+            "street": "Rotshild",
+            "position": {
+                "lng": "lng",
+                "lat": "lat"
+            }
+        }
+    },
+    {
+        "id": "cat_1",
+        "sub_id": "sub_cat_id_3",
+        "images": [],
+        "description": "description sub_cat_id_3",
+        "location": {
+            "city": "tel-aviv",
+            "street": "Rotshild",
+            "position": {
+                "lng": "lng",
+                "lat": "lat"
+            }
+        }
+    }
+]
