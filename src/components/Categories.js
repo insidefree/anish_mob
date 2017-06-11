@@ -20,7 +20,7 @@ class Categories extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <ScrollView style={styles.container}>
-                    {this.props.categories.map(el => <Category key={el.categoryId} {...el}>{el.title}</Category>)}
+                    {this.props.categories.map(el => <Category key={el.categoryId} {...el} />)}
                 </ScrollView>
             </View>
         )

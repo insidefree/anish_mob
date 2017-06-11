@@ -1,4 +1,7 @@
 import firebase from 'firebase'
+// import { createAction } from 'redux-actions'
+import { Actions } from 'react-native-router-flux'
+
 import dog from '../dataJSON/dogsData'
 import animals from '../dataJSON/animals'
 import {
@@ -11,6 +14,11 @@ export const choiceCategory = categoryID => ({
     type: CHOICE_CATEGORY,
     payload: categoryID
 })
+
+// export const choiceCategory = createAction(
+//     CHOICE_CATEGORY,
+//     () => ({ categoryID })
+// )
 
 export const loadCategoriesByID = categoryID => {
     switch (categoryID) {

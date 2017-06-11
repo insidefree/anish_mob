@@ -44,7 +44,7 @@ const styles = {
 class Category extends Component {
     render() {
         const { backdropView, headline, viewStyle } = styles;
-        const { categoryId } = this.props
+        const { categoryId, title } = this.props
         // console.log(this.props.categoryID)
         return (
             <TouchableWithoutFeedback
@@ -56,7 +56,7 @@ class Category extends Component {
             >
                 <View style={viewStyle}>
                     <View style={backdropView}>
-                        <Text style={headline}>{this.props.children}</Text>
+                        <Text style={headline}>{title}</Text>
                     </View>
                 </View>
             </TouchableWithoutFeedback>
