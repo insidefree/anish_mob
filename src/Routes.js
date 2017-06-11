@@ -4,6 +4,7 @@ import { Router, Scene } from 'react-native-router-flux'
 // components
 import Categories from './components/Categories'
 import AnimalsList from './components/AnimalsList'
+import ExampleComponent from './components/ExampleComponent'
 
 class Routes extends Component {
     render() {
@@ -27,6 +28,15 @@ class Routes extends Component {
                     titleStyle={styles.titleStyle}
                     component={AnimalsList}
                     title='blog'
+                />
+                <Scene
+                    key='infinity'
+                    navigationBarStyle={styles.navigationBarStyle}
+                    barButtonTextStyle={styles.barButtonTextStyle}
+                    barButtonIconStyle={styles.barButtonIconStyle}
+                    titleStyle={styles.titleStyle}
+                    component={ExampleComponent}
+                    title='infinity'
                 />
             </Router>
         );
