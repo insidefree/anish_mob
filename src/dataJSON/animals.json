@@ -2,7 +2,11 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_1",
-        "images": [],
+        "images": [
+            "https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg",
+            "https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg",
+            "https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg"
+        ],
         "description": "description sub_cat_id_1",
         "location": {
             "city": "tel-aviv",
@@ -16,7 +20,11 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_2",
-        "images": [],
+        "images": [
+            "https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg",
+            "https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg",
+            "https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg"
+        ],
         "description": "description sub_cat_id_2",
         "location": {
             "city": "tel-aviv",
@@ -30,7 +38,11 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_3",
-        "images": [],
+        "images": [
+            "https://static.pexels.com/photos/36477/dogs-batons-play-bite.jpg",
+            "https://static.pexels.com/photos/36477/dogs-batons-play-bite.jpg",
+            "https://static.pexels.com/photos/36477/dogs-batons-play-bite.jpg"
+        ],
         "description": "description sub_cat_id_3",
         "location": {
             "city": "tel-aviv",
