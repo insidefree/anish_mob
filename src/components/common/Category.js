@@ -51,7 +51,7 @@ class Category extends Component {
                 style={{ flex: 1 }}
                 onPress={() => {
                     this.props.choiceCategory(categoryId)
-                    Actions.blog()
+                    Actions.animalList()
                 }}
             >
                 <View style={viewStyle}>

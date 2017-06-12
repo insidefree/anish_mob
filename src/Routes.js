@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { Router, Scene } from 'react-native-router-flux'
 
+
 // components
 import Categories from './components/Categories'
-import AnimalsList from './components/AnimalsList'
+import AnimalList from './components/AnimalList'
 import ExampleComponent from './components/ExampleComponent'
+import AppState from './components/AppState'
+import AnimalCard from './components/AnimalCard'
 
 class Routes extends Component {
     render() {
@@ -21,13 +24,13 @@ class Routes extends Component {
                     title='Menu'
                 />
                 <Scene
-                    key='blog'
+                    key='animalList'
                     navigationBarStyle={styles.navigationBarStyle}
                     barButtonTextStyle={styles.barButtonTextStyle}
                     barButtonIconStyle={styles.barButtonIconStyle}
                     titleStyle={styles.titleStyle}
-                    component={AnimalsList}
-                    title='blog'
+                    component={AnimalList}
+                    title='Animal List'
                 />
                 <Scene
                     key='infinity'
@@ -37,6 +40,24 @@ class Routes extends Component {
                     titleStyle={styles.titleStyle}
                     component={ExampleComponent}
                     title='infinity'
+                />
+                <Scene
+                    key='state'
+                    navigationBarStyle={styles.navigationBarStyle}
+                    barButtonTextStyle={styles.barButtonTextStyle}
+                    barButtonIconStyle={styles.barButtonIconStyle}
+                    titleStyle={styles.titleStyle}
+                    component={AppState}
+                    title='state'
+                />
+                <Scene
+                    key='animalCard'
+                    navigationBarStyle={styles.navigationBarStyle}
+                    barButtonTextStyle={styles.barButtonTextStyle}
+                    barButtonIconStyle={styles.barButtonIconStyle}
+                    titleStyle={styles.titleStyle}
+                    component={AnimalCard}
+                    title='Animal Card'
                 />
             </Router>
         );

@@ -6,7 +6,8 @@ import dog from '../dataJSON/dogsData'
 import animals from '../dataJSON/animals'
 import {
     CHOICE_CATEGORY,
-    CHOICE_SUB_CATEGORIES
+    CHOICE_SUB_CATEGORIES,
+    ANIMAL_LIST_LOAD
 } from '../constants/'
 
 
@@ -15,10 +16,6 @@ export const choiceCategory = categoryID => ({
     payload: categoryID
 })
 
-// export const choiceCategory = createAction(
-//     CHOICE_CATEGORY,
-//     () => ({ categoryID })
-// )
 
 export const loadCategoriesByID = categoryID => {
     switch (categoryID) {
@@ -36,3 +33,7 @@ export const loadCategoriesByID = categoryID => {
 
 }
 
+export const animalListLoad = animalID => ({
+    type: ANIMAL_LIST_LOAD,
+    payload: animalID
+})
