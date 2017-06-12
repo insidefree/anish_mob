@@ -4,7 +4,7 @@ import { View, ScrollView } from 'react-native'
 
 // components
 import Category from '../components/common/Category'
-
+import LoginForm from '../components/LoginForm'
 
 const styles = {
     container: {
@@ -20,6 +20,7 @@ class Categories extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <ScrollView style={styles.container}>
+                    <LoginForm />
                     {this.props.categories.map(el => <Category key={el.categoryId} {...el} />)}
                 </ScrollView>
             </View>

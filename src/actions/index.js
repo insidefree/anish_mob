@@ -4,10 +4,13 @@ import { Actions } from 'react-native-router-flux'
 
 import dog from '../dataJSON/dogsData'
 import animals from '../dataJSON/animals'
+
+
 import {
     CHOICE_CATEGORY,
     CHOICE_SUB_CATEGORIES,
-    ANIMAL_LIST_LOAD
+    ANIMAL_LIST_LOAD,
+    LOGIN_USER
 } from '../constants/'
 
 
@@ -36,4 +39,9 @@ export const loadCategoriesByID = categoryID => {
 export const animalListLoad = animalID => ({
     type: ANIMAL_LIST_LOAD,
     payload: animalID
+})
+
+export const loginUser = email => ({
+    type: LOGIN_USER,
+    payload: email
 })

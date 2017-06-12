@@ -3,3 +3,6 @@ export const CHOICE_SUB_CATEGORIES = 'CHOICE_SUB_CATEGORIES'
 
 
 export const ANIMAL_LIST_LOAD = 'ANIMAL_LIST_LOAD'
+
+
+export const LOGIN_USER = 'LOGIN_USER'
