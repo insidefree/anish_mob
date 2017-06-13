@@ -20,7 +20,7 @@ class LoginForm extends Component {
 
     handleSubmit = () => {
         const { email, password } = this.state
-        this.setState({error: {message: ""}})
+        this.setState({ error: { message: "" } })
         firebaseApp.auth().createUserWithEmailAndPassword(email, password)
             .catch(error => this.setState({ error }))
     };
@@ -29,9 +29,9 @@ class LoginForm extends Component {
         const { textStyle, inputStyle, viewStyle, textStyleBtn, buttonStyle } = styles;
         return (
             <View style={{ marginVertical: 8 }}>
-              <Text style={{ fontSize: 18, padding: 16, alignSelf: 'center' }}>
-                {this.props.title}
-              </Text>
+                <Text style={{ fontSize: 18, padding: 16, alignSelf: 'center' }}>
+                    {this.props.title}
+                </Text>
                 <View style={viewStyle}>
                     <Text style={textStyle}>Email</Text>
                     <TextInput
