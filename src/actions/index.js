@@ -5,7 +5,6 @@ import { Actions } from 'react-native-router-flux'
 import dog from '../dataJSON/dogsData'
 import animals from '../dataJSON/animals'
 
-
 import {
     CHOICE_CATEGORY,
     CHOICE_SUB_CATEGORIES,
@@ -13,12 +12,10 @@ import {
     LOGIN_USER
 } from '../constants/'
 
-
 export const choiceCategory = categoryID => ({
     type: CHOICE_CATEGORY,
     payload: categoryID
 })
-
 
 export const loadCategoriesByID = categoryID => {
     switch (categoryID) {

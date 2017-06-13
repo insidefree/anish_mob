@@ -23,13 +23,15 @@ class LoginForm extends Component {
         this.setState({error: {message: ""}})
         firebaseApp.auth().createUserWithEmailAndPassword(email, password)
             .catch(error => this.setState({ error }))
-        console.log(this.state.error)
     };
 
     render() {
         const { textStyle, inputStyle, viewStyle, textStyleBtn, buttonStyle } = styles;
         return (
-            <View>
+            <View style={{ marginVertical: 8 }}>
+              <Text style={{ fontSize: 18, padding: 16, alignSelf: 'center' }}>
+                {this.props.title}
+              </Text>
                 <View style={viewStyle}>
                     <Text style={textStyle}>Email</Text>
                     <TextInput
@@ -58,7 +60,12 @@ class LoginForm extends Component {
                 >
                     <Text style={textStyleBtn}>SingUP</Text>
                 </TouchableOpacity>
-                {this.state.error.message.length > 0 && <Text>{this.state.error.message}</Text>}
+                {
+                    this.state.error.message.length > 0 &&
+                    <Text style={{ backgroundColor: 'red', padding: 16, color: '#fff' }}>
+                        {this.state.error.message}
+                    </Text>
+                }
             </View>
         )
     }

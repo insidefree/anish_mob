@@ -1,16 +1,18 @@
 import Expo from 'expo';
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux'
-import store from './src/store'
-// import HomeScene from './scenes/HomeScene'
-import Categories from './src/components/Categories'
+
 import Routes from './src/Routes'
+import store from './src/store'
+
+import Categories from './src/components/Categories'
 
 import { firebaseApp } from './src/config/firebase'
 
 // actions
 import { loginUser } from './src/actions'
 
+store.subscribe(() => console.log(store.getState()))
 
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
@@ -20,10 +22,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
   }
 })
 
-store.subscribe(() => console.log(store.getState()))
-
-
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
