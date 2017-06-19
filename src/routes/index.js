@@ -4,14 +4,14 @@ import { StackNavigator } from 'react-navigation'
 
 // screens
 import CategoriesScreen from '../screens/CategoriesScreen'
-import AnimalList from '../screens/AnimalList'
+import AnimalListScreen from '../screens/AnimalListScreen'
 
 
 export const RootNav = StackNavigator({
     CategoriesScreen: {
         screen: CategoriesScreen
     },
-    AnimalList: {
-        screen: AnimalList
+    AnimalListScreen: {
+        screen: AnimalListScreen
     }
 })

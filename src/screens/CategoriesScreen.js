@@ -10,14 +10,13 @@ export default class CategoriesScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
+                <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate('AnimalListScreen')}
+                >
+                    <Text>PRESS ME!!!</Text>
+                </TouchableOpacity>
                 <Categories />
             </View>
         )
     }
 }
-
-// <TouchableOpacity
-//                     onPress={() => this.props.navigation.navigate('AnimalList')}
-//                 >
-//                     <Text>PRESS ME!!!</Text>
-//                 </TouchableOpacity>
