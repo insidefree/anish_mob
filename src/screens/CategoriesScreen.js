@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 
 
 // components
-import Categories from '../components/Categories/Categories'
+import CategoryList from '../components/Categories/CategoryList'
 
 
 export default class CategoriesScreen extends Component {
@@ -15,7 +15,7 @@ export default class CategoriesScreen extends Component {
                 >
                     <Text>PRESS ME!!!</Text>
                 </TouchableOpacity>
-                <Categories />
+                <CategoryList />
             </View>
         )
     }

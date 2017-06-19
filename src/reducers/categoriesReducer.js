@@ -1,11 +1,16 @@
-const data = { "categories": { "cat_1": "cat_1", "cat_2": "cat_2" } }
+import { LOAD_CATEGORIES } from '../constants'
 
 const INITIAL_STATE = {
-    categoriesList: data.categories
+    categoryList: []
 }
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
+        case LOAD_CATEGORIES:
+            return {
+                ...state,
+                categoryList: action.payload
+            }
         default:
             return state
     }

@@ -8,7 +8,7 @@ import { View, Text, TouchableWithoutFeedback } from 'react-native'
 import { selectCategory } from '../../actions'
 
 
-class CategoryCard extends Component {
+class CategoryListItem extends Component {
     render() {
         const { backdropView, headline, viewStyle } = styles;
         // const { categoryId, title } = this.props
@@ -60,4 +60,4 @@ const styles = {
 
 export default connect(null, {
     selectCategory
-})(CategoryCard)
+})(CategoryListItem)

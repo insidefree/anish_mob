@@ -1,4 +1,2 @@
 // categoriesAction
-import { selectCategory } from './categoriesAction'
-
-export const selectCategory
+export import { selectCategory } from './categoriesAction'

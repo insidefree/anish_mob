@@ -1,2 +1,3 @@
 // Categories
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
+export const LOAD_CATEGORIES = 'SELECT_CATEGORIES'

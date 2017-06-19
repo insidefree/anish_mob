@@ -2,17 +2,29 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ScrollView, Text } from 'react-native'
 
+
 // components
 // import CategoryCard from './CategoryCard'
 
+// actions
+import { loadCategories } from '../../actions/categoriesAction'
+console.log(loadCategories)
 // {this.props.categories.map(el => <CategoryCard key={'1'} {...el} />)}
+        // {this.props.categories.map(cat => <Text>{cat.title}</Text>)}
 
-class Categories extends Component {
+
+
+class CategoryList extends Component {
+  componentWillMount() {
+    this.props.loadCategories()
+    console.log('*', this.props.categories)
+  }
+
   render() {
     console.log('***', this.props)
     return (
       <ScrollView style={styles.container}>
-        <Text>{JSON.stringify(this.props.categories)}</Text>
+        {this.props.categories.map(cat => <Text key={cat.categoryId} data={cat}>{cat.title}</Text>)}
       </ScrollView>
     )
   }
@@ -27,7 +39,7 @@ const styles = {
 }
 
 const mapStateToProps = state => ({
-  categories: state.categories.categoriesList
+  categories: state.categories.categoryList
 })
 
-export default connect(mapStateToProps)(Categories)
+export default connect(mapStateToProps, { loadCategories })(CategoryList)
