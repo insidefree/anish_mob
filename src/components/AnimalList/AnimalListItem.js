@@ -3,7 +3,7 @@ import { View, Text, Dimensions, ScrollView, Image } from 'react-native'
 
 // consts
 const SCREEN_WIDTH = Dimensions.get('window').width;
-SCREEN_WIDTH = SCREEN_WIDTH*90/100
+// SCREEN_WIDTH = SCREEN_WIDTH*90/100
 
 const uri = 'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg';
 export class AnimalListItem extends Component {
@@ -11,9 +11,13 @@ export class AnimalListItem extends Component {
         const { animal } = this.props
         console.log(animal)
         return (
-            <View style={{ marginVertical: 8 }}>
-                <Image style={styles.imageStyle} source={{uri}} />
+            <View style={{ marginVertical: 8, padding: 20 }}>
+                <Image style={styles.imageStyle} source={{ uri }} />
                 <View style={styles.cardStyle}>
+                    <Image source={require('../../assets/Menu-button.png')} style={{
+                        width: 50,
+                        height: 40
+                    }} />
                     <Text>
                         Description: {animal.description}
                     </Text>
@@ -54,9 +58,9 @@ const styles = {
         height: 180,
     },
     imageStyle: {
-        height: null,
+        height: 200,
         flex: 1,
-        width: SCREEN_WIDTH,
+        width: null,
     },
 };
 

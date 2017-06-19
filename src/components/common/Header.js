@@ -26,13 +26,9 @@ const Header = ({ title }) => {
   const { textStyle, viewStyle } = styles;
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>{ title }</Text>
+      <Text style={textStyle}>{title || 'default'}</Text>
     </View>
   );
-};
-
-Header.propTypes = {
-  title: React.PropTypes.string.isRequired
 };
 
 export { Header };

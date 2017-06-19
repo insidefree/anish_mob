@@ -2,10 +2,9 @@ import { combineReducers } from 'redux'
 
 
 // reducers
-import loadCategories from './loadCategoriesReducer'
+import categories from './categoriesReducer'
 
-console.log(loadCategories())
 
 export default combineReducers({
-    loadCategories
+    categories
 })

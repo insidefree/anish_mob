@@ -7,12 +7,12 @@ import { ScrollView, Text } from 'react-native'
 
 // {this.props.categories.map(el => <CategoryCard key={'1'} {...el} />)}
 
-export class Categories extends Component {
+class Categories extends Component {
   render() {
     console.log('***', this.props)
     return (
       <ScrollView style={styles.container}>
-        <Text>categories</Text>
+        <Text>{JSON.stringify(this.props.categories)}</Text>
       </ScrollView>
     )
   }
@@ -27,7 +27,7 @@ const styles = {
 }
 
 const mapStateToProps = state => ({
-  categories: {"a": "a"},
+  categories: state.categories.categoriesList
 })
 
 export default connect(mapStateToProps)(Categories)

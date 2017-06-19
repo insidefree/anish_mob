@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ListView, Text } from 'react-native'
+import { ListView, Text, Image } from 'react-native'
 
 // components
 import { AnimalListItem } from './AnimalListItem'
@@ -18,10 +18,17 @@ export class AnimalList extends Component {
 
     render() {
         return (
-            <ListView
-                dataSource={this.state.dataSource}
-                renderRow={animal => <AnimalListItem animal={animal} />}
-            />
+            <Image source={require('../../assets/BG-01.png')} style={{
+                flex: 1,
+                resizeMode: 'cover', // or 'stretch'
+                width: null,
+                height: null
+            }}>
+                <ListView style={{ flex: 1 }}
+                    dataSource={this.state.dataSource}
+                    renderRow={animal => <AnimalListItem animal={animal} />}
+                />
+            </Image>
         );
     }
 }
