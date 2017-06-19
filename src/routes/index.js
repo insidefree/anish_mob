@@ -24,7 +24,7 @@ export const RootNav = StackNavigator({
             title: `Animals List`,
             headerStyle: {
                 backgroundColor: '#EE5350'
-
+                
             },
             headerTintColor : '#FFF',
         })
