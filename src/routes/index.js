@@ -13,8 +13,9 @@ export const RootNav = StackNavigator({
         navigationOptions: ({ navigation }) => ({
             title: `Main Screen`,
             headerStyle: {
-                backgroundColor: 'coral',
-            }
+                backgroundColor: '#EE5350'
+            },
+            headerTintColor : '#FFF'
         })
     },
     AnimalListScreen: {
@@ -22,8 +23,10 @@ export const RootNav = StackNavigator({
         navigationOptions: ({ navigation }) => ({
             title: `Animals List`,
             headerStyle: {
-                backgroundColor: 'coral',
-            }
+                backgroundColor: '#EE5350'
+
+            },
+            headerTintColor : '#FFF',
         })
     }
 })

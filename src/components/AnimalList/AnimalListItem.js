@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, Dimensions, ScrollView, Image } from 'react-native'
+import { View, Text, Image } from 'react-native'
 
-// consts
-const SCREEN_WIDTH = Dimensions.get('window').width;
-// SCREEN_WIDTH = SCREEN_WIDTH*90/100
 
 const uri = 'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg';
 export class AnimalListItem extends Component {
@@ -29,14 +26,6 @@ export class AnimalListItem extends Component {
         )
     }
 }
-
-// <ScrollView
-//     horizontal
-//     style={[styles.scrollView, styles.horizontalScrollView]}
-// >
-//     {animal.images.map((uri, i) => <Image key={i} style={styles.imageStyle} source={{ uri }}
-//     />)}
-// </ScrollView>
 
 const styles = {
     titleStyle: {
