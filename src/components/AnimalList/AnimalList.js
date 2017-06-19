@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { ListView, Text } from 'react-native'
 
+// components
+import { AnimalListItem } from './AnimalListItem'
+
+// temp
+import animals from '../../fakeData/animals'
 
 export class AnimalList extends Component {
+    constructor() {
+        super();
+        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+        this.state = {
+            dataSource: ds.cloneWithRows(animals),
+        };
+    }
+
     render() {
         return (
-            <View>
-                <Text>
-                    animals
-                </Text>
-            </View>
-        )
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={animal => <AnimalListItem animal={animal} />}
+            />
+        );
     }
 }
 
