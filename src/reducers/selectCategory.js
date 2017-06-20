@@ -1,9 +1,9 @@
-import { SELECT_CATEGORY } from '../constants'
+import { SELECT_CATEGORY, NAVIGATE_TO_CAT_BY_ID } from '../constants'
 
 
 const INIT_STATE = {
-    selectedCategory: null
-};
+    selectedCategory: null,
+}
 
 
 export default (state = INIT_STATE, action) => {
@@ -11,7 +11,7 @@ export default (state = INIT_STATE, action) => {
         case SELECT_CATEGORY:
             return {
                 ...state,
-                selectedCategory: action.payload
+                selectedCategory: action.payload,
             }
         default:
             return state

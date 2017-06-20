@@ -7,7 +7,7 @@ import categories from '../fakeData/categories'
 
 export const selectCategory = catID => ({
     type: SELECT_CATEGORY,
-    payload: catID
+    payload: categories.filter(cat => cat.categoryId === catID)[0]
 })
 
 

@@ -18,6 +18,8 @@ class CategoryListItem extends Component {
                 onPress={() => {
                     this.props.selectCategory(categoryId)
                     setTimeout(() => console.log('selectedCategory: ', this.props.selectedCategory), .1)
+                    setTimeout(() =>  console.log('this props', this.props), .1)
+                    // this.props.navigation.navigate('this.props.selectedCategory.navigate')
                 }}
             >
                 <View style={viewStyle}>
@@ -61,7 +63,7 @@ const styles = {
 };
 
 const mapStateToProps = state => ({
-    selectedCategory: state.selectCategory.selectedCategory
+    selectedCategory: state.selectCategory.selectedCategory,
 })
 
 export default connect(mapStateToProps, {

@@ -5,6 +5,7 @@ import { combineReducers } from 'redux'
 import categories from './categoriesReducer'
 import selectCategory from './selectCategory'
 
+
 export default combineReducers({
     categories,
     selectCategory
