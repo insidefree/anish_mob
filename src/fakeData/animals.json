@@ -2,6 +2,8 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_1",
+        "name": "Luna",
+        "age": "6 mounth",
         "images": [
             "https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg",
             "https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg",
@@ -20,6 +22,8 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_2",
+        "name": "Luna",
+        "age": "6 mounth",
         "images": [
             "https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg",
             "https://static.pexels.com/photos/159541/wildlife-photography-pet-photography-dog-animal-159541.jpeg",
@@ -38,6 +42,8 @@
     {
         "id": "cat_1",
         "sub_id": "sub_cat_id_3",
+        "name": "Luna",
+        "age": "6 mounth",
         "images": [
             "https://static.pexels.com/photos/36477/dogs-batons-play-bite.jpg",
             "https://static.pexels.com/photos/36477/dogs-batons-play-bite.jpg",
