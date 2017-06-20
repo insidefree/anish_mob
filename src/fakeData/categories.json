@@ -1,38 +1,47 @@
 [
     {
         "categoryId": "cat_1",
-        "title": "Shelters"
+        "title": "Shelters",
+        "navigate": "AnimalListScreen"
     },
     {
         "categoryId": "cat_2",
-        "title": "Veterinary clinics"
+        "title": "Veterinary clinics",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_3",
-        "title": "Colobaration"
+        "title": "Colobaration",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_4",
-        "title": "Chat"
+        "title": "Chat",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_5",
-        "title": "Funny moments"
+        "title": "Funny moments",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_6",
-        "title": "Quiz"
+        "title": "Quiz",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_7",
-        "title": "Interesting facts"
+        "title": "Interesting facts",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_8",
-        "title": "Top users"
+        "title": "Top users",
+        "navigate": "CorkScreen"
     },
     {
         "categoryId": "cat_9",
-        "title": "Left an animal in good hands"
+        "title": "Left an animal in good hands",
+        "navigate": "CorkScreen"
     }
 ]

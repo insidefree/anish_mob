@@ -4,27 +4,25 @@ import { ScrollView, Text } from 'react-native'
 
 
 // components
-// import CategoryCard from './CategoryCard'
+import CategoryListItem from './CategoryListItem'
 
 // actions
 import { loadCategories } from '../../actions/categoriesAction'
 console.log(loadCategories)
 // {this.props.categories.map(el => <CategoryCard key={'1'} {...el} />)}
-        // {this.props.categories.map(cat => <Text>{cat.title}</Text>)}
+// {this.props.categories.map(cat => <Text>{cat.title}</Text>)}
 
 
 
 class CategoryList extends Component {
   componentWillMount() {
     this.props.loadCategories()
-    console.log('*', this.props.categories)
   }
 
   render() {
-    console.log('***', this.props)
     return (
       <ScrollView style={styles.container}>
-        {this.props.categories.map(cat => <Text key={cat.categoryId} data={cat}>{cat.title}</Text>)}
+        {this.props.categories.map(cat => <CategoryListItem key={cat.categoryId} data={cat} />)}
       </ScrollView>
     )
   }

@@ -1,12 +1,15 @@
 import { SELECT_CATEGORY, LOAD_CATEGORIES } from '../constants'
 
+
 // fake data
 import categories from '../fakeData/categories'
 
-export const selectCategory = () => ({
+
+export const selectCategory = catID => ({
     type: SELECT_CATEGORY,
-    payload: ['test payload select Category']
+    payload: catID
 })
+
 
 export const loadCategories = () => ({
     type: LOAD_CATEGORIES,

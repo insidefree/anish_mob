@@ -2,21 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // components
-import { View, Text, TouchableWithoutFeedback } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 // actions
-import { selectCategory } from '../../actions'
+import { selectCategory } from '../../actions/categoriesAction'
 
 
 class CategoryListItem extends Component {
     render() {
         const { backdropView, headline, viewStyle } = styles;
-        // const { categoryId, title } = this.props
+        const { categoryId, title } = this.props.data
         return (
-            <TouchableWithoutFeedback
+            <TouchableOpacity
                 style={{ flex: 1 }}
                 onPress={() => {
-                    this.props.selectCategory()
+                    this.props.selectCategory(categoryId)
+                    setTimeout(() => console.log('selectedCategory: ', this.props.selectedCategory), .1)
                 }}
             >
                 <View style={viewStyle}>
@@ -24,7 +25,7 @@ class CategoryListItem extends Component {
                         <Text style={headline}>{title}</Text>
                     </View>
                 </View>
-            </TouchableWithoutFeedback>
+            </TouchableOpacity>
         )
     }
 }
@@ -55,9 +56,14 @@ const styles = {
         textAlign: 'center',
         backgroundColor: 'rgba(0,0,0,0)',
         color: 'white'
-    }
+    },
+
 };
 
-export default connect(null, {
+const mapStateToProps = state => ({
+    selectedCategory: state.selectCategory.selectedCategory
+})
+
+export default connect(mapStateToProps, {
     selectCategory
 })(CategoryListItem)

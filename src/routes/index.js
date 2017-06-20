@@ -5,7 +5,7 @@ import { StackNavigator } from 'react-navigation'
 // screens
 import CategoriesScreen from '../screens/CategoriesScreen'
 import AnimalListScreen from '../screens/AnimalListScreen'
-
+import CorkScreen from '../screens/CorkScreen'
 
 export const RootNav = StackNavigator({
     CategoriesScreen: {
@@ -15,7 +15,7 @@ export const RootNav = StackNavigator({
             headerStyle: {
                 backgroundColor: '#EE5350'
             },
-            headerTintColor : '#FFF'
+            headerTintColor: '#FFF'
         })
     },
     AnimalListScreen: {
@@ -24,9 +24,20 @@ export const RootNav = StackNavigator({
             title: `Animals List`,
             headerStyle: {
                 backgroundColor: '#EE5350'
-                
+
             },
-            headerTintColor : '#FFF',
+            headerTintColor: '#FFF',
+        })
+    },
+    CorkScreen: {
+        screen: CorkScreen,
+        navigationOptions: ({ navigation }) => ({
+            title: `Cork Screen`,
+            headerStyle: {
+                backgroundColor: '#EE5350'
+
+            },
+            headerTintColor: '#FFF',
         })
     }
 })
