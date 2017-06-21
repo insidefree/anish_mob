@@ -1,5 +1,5 @@
 import React from 'react'
-import { StackNavigator } from 'react-navigation'
+import { StackNavigator, Button, Text } from 'react-navigation'
 
 
 // screens
@@ -16,6 +16,11 @@ export const RootNav = StackNavigator({
                 backgroundColor: '#EE5350'
             },
             headerTintColor: '#FFF'
+        
+
+        }),
+        header: ({ goBack }) => ({
+            right: (<Button name={'close'} onPress={() => console.log('title btn press')} />)
         })
     },
     AnimalListScreen: {
