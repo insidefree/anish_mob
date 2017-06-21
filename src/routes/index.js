@@ -18,9 +18,6 @@ export const RootNav = StackNavigator({
             headerTintColor: '#FFF'
         
 
-        }),
-        header: ({ goBack }) => ({
-            right: (<Button name={'close'} onPress={() => console.log('title btn press')} />)
         })
     },
     AnimalListScreen: {
