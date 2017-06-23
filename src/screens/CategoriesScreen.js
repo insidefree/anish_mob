@@ -1,18 +1,29 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 
 // components
 import CategoryList from '../components/Categories/CategoryList'
 import Login from '../components/Login/Login'
+import TestComp from '../components/TestComp/TestComp'
+
 
 export default class CategoriesScreen extends Component {
-    static navigationOptions = {
-        title: 'Home',
-        headerStyle: {
-            backgroundColor: '#EE5350'
-        },
-        headerTintColor: '#FFF'
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: 'Home',
+            headerStyle: {
+                backgroundColor: '#EE5350'
+            },
+            headerTintColor: '#FFF',
+            headerRight: <TouchableOpacity onPress={() => { navigation.navigate('CorkScreen') }}>
+                <Image source={require('../assets/menuButton.png')} style={{
+                    height: 25.5,
+                    width: 31,
+                    marginRight: 20
+                }} />
+            </TouchableOpacity>
+        }
     }
 
     render() {
@@ -25,14 +36,6 @@ export default class CategoriesScreen extends Component {
                             <Text style={{ padding: 16 }}>Log Out</Text>
                         </TouchableOpacity>
                 }
-                <TouchableOpacity
-                    onPress={() => {
-                        this.props.navigation.navigate('AnimalListScreen')
-                        console.log('this props button', this.props)
-                    }}
-                >
-                    <Text>PRESS ME!!!</Text>
-                </TouchableOpacity>
                 <CategoryList navigate={this.props.navigation.navigate} />
             </View>
         )

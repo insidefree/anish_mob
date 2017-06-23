@@ -15,13 +15,15 @@ class CategoryList extends Component {
   }
 
   render() {
+    const { navigate } = this.props
+    console.log('list navigate: ', this.props.navigate)
     return (
       <ScrollView style={styles.container}>
         {this.props.categories.map(cat => (
           <CategoryListItem
             key={cat.categoryId}
             data={cat}
-            onPress={() => this.props.navigate('AnimalListScreen')}
+            onPress={(screenName) => navigate(screenName)}
           />
         ))}
       </ScrollView>

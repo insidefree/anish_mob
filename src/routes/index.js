@@ -11,9 +11,6 @@ import CategoryListItem from '../components/Categories/CategoryListItem'
 
 
 export const RootNav = StackNavigator({
-    CategoriesScreen: {
-        screen: CategoriesScreen,
-    },
     AnimalListScreen: {
         screen: AnimalListScreen,
         navigationOptions: ({ navigation }) => ({
@@ -23,6 +20,9 @@ export const RootNav = StackNavigator({
             },
             headerTintColor: '#FFF',
         })
+    },
+    CategoriesScreen: {
+        screen: CategoriesScreen,
     },
     CorkScreen: {
         screen: CorkScreen,

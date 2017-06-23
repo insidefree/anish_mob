@@ -9,6 +9,7 @@ import { selectCategory } from '../../actions/categoriesAction'
 
 
 class CategoryListItem extends Component {
+
     render() {
         const { backdropView, headline, viewStyle } = styles;
         const { categoryId, title } = this.props.data
@@ -17,11 +18,8 @@ class CategoryListItem extends Component {
                 style={{ flex: 1 }}
                 onPress={() => {
                     this.props.selectCategory(categoryId)
-                    {/*setTimeout(() => console.log('selectedCategory: ', this.props.selectedCategory), .1)*/ }
                     setTimeout(() => console.log('this props', this.props), .1)
-                    {/*nav.navigation.navigate(this.props.selectedCategory.navigate)*/}
-                    {/*this.props.navigation.navigate('AnimalListScreen');*/}
-                    this.props.onPress()
+                    setTimeout(() => this.props.onPress(this.props.selectedCategory.navigate), .1)
                 }}
             >
                 <View style={viewStyle}>

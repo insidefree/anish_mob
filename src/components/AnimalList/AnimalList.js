@@ -18,7 +18,7 @@ export class AnimalList extends Component {
 
     render() {
         return (
-            <Image source={require('../../assets/BG-01.png')} style={{
+            <Image source={require('../../assets/BG-01-black.jpg')} style={{
                 flex: 1,
                 resizeMode: 'cover', // or 'stretch'
                 width: null,

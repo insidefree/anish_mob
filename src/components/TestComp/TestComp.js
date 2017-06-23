@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 
-export class TestComp extends Component {
+export default class TestComp extends Component {
     render() {
         return (
             <View>
