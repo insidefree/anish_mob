@@ -1,5 +1,5 @@
 import React from 'react'
-import { StackNavigator } from 'react-navigation'
+import { StackNavigator, Button, Text } from 'react-navigation'
 
 // screens
 import CategoriesScreen from '../screens/CategoriesScreen'

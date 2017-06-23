@@ -1,3 +1,7 @@
 // Categories
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
 export const LOAD_CATEGORIES = 'SELECT_CATEGORIES'
+
+
+// Firebase
+export const LOGIN_USER = 'LOGIN_USER'
