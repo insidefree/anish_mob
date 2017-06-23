@@ -12,17 +12,10 @@ import CategoryListItem from '../components/Categories/CategoryListItem'
 
 export const RootNav = StackNavigator({
     AnimalListScreen: {
-        screen: AnimalListScreen,
-        navigationOptions: ({ navigation }) => ({
-            title: `Animals List`,
-            headerStyle: {
-                backgroundColor: '#EE5350'
-            },
-            headerTintColor: '#FFF',
-        })
+        screen: AnimalListScreen
     },
     CategoriesScreen: {
-        screen: CategoriesScreen,
+        screen: CategoriesScreen
     },
     CorkScreen: {
         screen: CorkScreen,
