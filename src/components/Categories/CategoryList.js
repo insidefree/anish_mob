@@ -17,7 +17,13 @@ class CategoryList extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        {this.props.categories.map(cat => <CategoryListItem key={cat.categoryId} data={cat} />)}
+        {this.props.categories.map(cat => (
+          <CategoryListItem
+            key={cat.categoryId}
+            data={cat}
+            onPress={() => this.props.navigate('AnimalListScreen')}
+          />
+        ))}
       </ScrollView>
     )
   }

@@ -7,6 +7,14 @@ import CategoryList from '../components/Categories/CategoryList'
 
 
 export default class CategoriesScreen extends Component {
+    static navigationOptions = {
+        title: 'Home',
+        headerStyle: {
+            backgroundColor: '#EE5350'
+        },
+        headerTintColor: '#FFF'
+    }
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -18,7 +26,7 @@ export default class CategoriesScreen extends Component {
                 >
                     <Text>PRESS ME!!!</Text>
                 </TouchableOpacity>
-                <CategoryList />
+                <CategoryList navigate={this.props.navigation.navigate} />
             </View>
         )
     }

@@ -17,9 +17,11 @@ class CategoryListItem extends Component {
                 style={{ flex: 1 }}
                 onPress={() => {
                     this.props.selectCategory(categoryId)
-                    setTimeout(() => console.log('selectedCategory: ', this.props.selectedCategory), .1)
-                    setTimeout(() =>  console.log('this props', this.props), .1)
-                    // this.props.navigation.navigate('this.props.selectedCategory.navigate')
+                    {/*setTimeout(() => console.log('selectedCategory: ', this.props.selectedCategory), .1)*/ }
+                    setTimeout(() => console.log('this props', this.props), .1)
+                    {/*nav.navigation.navigate(this.props.selectedCategory.navigate)*/}
+                    {/*this.props.navigation.navigate('AnimalListScreen');*/}
+                    this.props.onPress()
                 }}
             >
                 <View style={viewStyle}>
