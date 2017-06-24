@@ -1,8 +1,31 @@
 import React from 'react';
 import {
   Text,
-  View
+  View,
+  TouchableOpacity,
+  Image,
+  Platform
 } from 'react-native';
+
+
+
+const Header = ({ title }) => {
+  const { textStyle, viewStyle } = styles;
+  return (
+    <Image
+      source={require('../../assets/menuBG.png')}
+      style={viewStyle}>
+      <Text style={textStyle}>{title || 'default'}</Text>
+      <TouchableOpacity>
+        <Image source={require('../../assets/menuButton.png')} style={{
+          height: 25.5,
+          width: 31,
+          marginRight: 20
+        }} />
+      </TouchableOpacity>
+    </Image>
+  );
+};
 
 const styles = {
   textStyle: {
@@ -10,25 +33,26 @@ const styles = {
     color: '#383838'
   },
   viewStyle: {
-    padding: 16,
+    paddingTop: (Platform.OS === 'android') ? 25 : 16,
+    resizeMode: 'stretch',
+    flex: 1,
+    height: null,
+    width: null,
+    backgroundColor:'transparent',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.8,
-    elevation: 8,
-    position: 'relative'
+    // height: 60,
+    // backgroundColor: '#EE5350'
+    // padding: 16,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // backgroundColor: '#fff',
+    // shadowColor: '#000',
+    // shadowOffset: { width: 0, height: 8 },
+    // shadowOpacity: 0.8,
+    // elevation: 8,
+    // position: 'relative'
   }
 };
 
-const Header = ({ title }) => {
-  const { textStyle, viewStyle } = styles;
-  return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>{title || 'default'}</Text>
-    </View>
-  );
-};
-
-export { Header };
+export default Header

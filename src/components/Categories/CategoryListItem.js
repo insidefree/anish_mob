@@ -10,6 +10,10 @@ import { selectCategory } from '../../actions/categoriesAction'
 
 class CategoryListItem extends Component {
 
+    componentWillReceiveProps() {
+
+    }
+
     render() {
         const { backdropView, headline, viewStyle } = styles;
         const { categoryId, title } = this.props.data
