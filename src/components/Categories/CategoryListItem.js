@@ -10,8 +10,10 @@ import { selectCategory } from '../../actions/categoriesAction'
 
 class CategoryListItem extends Component {
 
-    componentWillReceiveProps() {
-
+    componentWillReceiveProps(nextProps) {
+         if (this.props.selectedCategory !== nextProps.selectedCategory){
+             this.props.onPress(nextProps.selectedCategory.navigate)
+         }
     }
 
     render() {
@@ -22,8 +24,8 @@ class CategoryListItem extends Component {
                 style={{ flex: 1 }}
                 onPress={() => {
                     this.props.selectCategory(categoryId)
-                    setTimeout(() => console.log('this props', this.props), .1)
-                    setTimeout(() => this.props.onPress(this.props.selectedCategory.navigate), .1)
+                    {/*setTimeout(() => console.log('this props', this.props), .1)*/}
+                    {/*setTimeout(() => this.props.onPress(this.props.selectedCategory), .1)*/}
                 }}
             >
                 <View style={viewStyle}>
