@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, Image, Platform } from 'react-native'
 import Expo from 'expo'
+import { Button } from 'react-native-elements'
 
 // components
 import { AnimalList } from '../components/AnimalList/AnimalList'
@@ -34,6 +35,9 @@ export default class AnimalListScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <AnimalList />
+                <Button
+                    title='Press ME'
+                    onPress={() => this.props.navigation.navigate('AddFormScreen')} />
             </View>
         )
     }

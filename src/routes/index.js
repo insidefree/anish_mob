@@ -5,6 +5,7 @@ import { StackNavigator, Button, Text } from 'react-navigation'
 import CategoriesScreen from '../screens/CategoriesScreen'
 import AnimalListScreen from '../screens/AnimalListScreen'
 import CorkScreen from '../screens/CorkScreen'
+import AddFormScreen from '../screens/AddFormScreen'
 
 // components
 import CategoryListItem from '../components/Categories/CategoryListItem'
@@ -37,5 +38,8 @@ export const RootNav = StackNavigator({
             },
             headerTintColor: '#FFF',
         })
+    },
+    AddFormScreen: {
+        screen: AddFormScreen
     }
 })

@@ -7,6 +7,10 @@ import { AnimalListItem } from './AnimalListItem'
 // temp
 import animals from '../../fakeData/animals'
 
+// config
+import { animalsRef } from '../../config/firebase'
+
+
 export class AnimalList extends Component {
     constructor() {
         super();
@@ -14,6 +18,18 @@ export class AnimalList extends Component {
         this.state = {
             dataSource: ds.cloneWithRows(animals),
         };
+    }
+
+    componentWillMount() {
+        animalsRef.on('value', snap => {
+            console.log(snap)
+            let animals = [];
+			snap.forEach(animal => {
+				const { name } = animal.val();
+				animals.push({ name });
+			});
+            console.log(animals)
+        })
     }
 
     render() {
@@ -28,6 +44,8 @@ export class AnimalList extends Component {
                     dataSource={this.state.dataSource}
                     renderRow={animal => <AnimalListItem animal={animal} />}
                 />
+
+
             </Image>
         );
     }

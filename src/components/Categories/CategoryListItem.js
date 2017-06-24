@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { NavigationActions } from 'react-navigation'
+
 
 // components
 import { View, Text, TouchableOpacity } from 'react-native'
@@ -24,8 +26,6 @@ class CategoryListItem extends Component {
                 style={{ flex: 1 }}
                 onPress={() => {
                     this.props.selectCategory(categoryId)
-                    {/*setTimeout(() => console.log('this props', this.props), .1)*/}
-                    {/*setTimeout(() => this.props.onPress(this.props.selectedCategory), .1)*/}
                 }}
             >
                 <View style={viewStyle}>
