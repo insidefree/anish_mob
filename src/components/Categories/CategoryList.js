@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { ScrollView, Text } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 
 // components
 import CategoryListItem from './CategoryListItem'
@@ -19,13 +19,15 @@ class CategoryList extends Component {
     console.log('list navigate: ', this.props.navigate)
     return (
       <ScrollView style={styles.container}>
-        {this.props.categories.map(cat => (
-          <CategoryListItem
-            key={cat.categoryId}
-            data={cat}
-            onPress={(screenName) => navigate(screenName)}
-          />
-        ))}
+        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
+          {this.props.categories.map(cat => (
+            <CategoryListItem
+              key={cat.categoryId}
+              data={cat}
+              onPress={(screenName) => navigate(screenName)}
+            />
+          ))}
+        </View>
       </ScrollView>
     )
   }
@@ -34,9 +36,12 @@ class CategoryList extends Component {
 
 const styles = {
   container: {
-    borderRadius: 4,
-    borderWidth: 0.5,
+    display: 'flex',
+    flexDirection: 'row',
+    // borderRadius: 4,
+    // borderWidth: 0.5,
     borderColor: '#d6d7da',
+    backgroundColor: '#EE5350'
   },
 }
 

@@ -13,8 +13,8 @@ export default class CategoriesScreen extends Component {
         return {
             title: 'Home',
             headerStyle: {
-                height: (Platform.OS === 'android') ? 64 : 40,
-                paddingTop: (Platform.OS === 'android') ? 20 : 0,
+                height: (Platform.OS === 'android') ? 64 : 55,
+                paddingTop: (Platform.OS === 'android') ? 20 : 15,
                 backgroundColor: '#EE5350'
             },
             headerTintColor: '#FFF',
