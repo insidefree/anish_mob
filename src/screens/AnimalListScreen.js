@@ -15,8 +15,8 @@ export default class AnimalListScreen extends Component {
         return {
             title: 'Animals List',
             headerStyle: {
-                height: 60,
-                paddingTop: (Platform.OS === 'android') ? 25 : 16,
+                height: (Platform.OS === 'android') ? 64 : 40,
+                paddingTop: (Platform.OS === 'android') ? 20 : 0,
                 backgroundColor: '#EE5350'
             },
             headerTintColor: '#FFF',

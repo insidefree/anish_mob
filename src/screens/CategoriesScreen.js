@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Platform } from 'react-native'
 
 
 // components
@@ -13,6 +13,8 @@ export default class CategoriesScreen extends Component {
         return {
             title: 'Home',
             headerStyle: {
+                height: (Platform.OS === 'android') ? 64 : 40,
+                paddingTop: (Platform.OS === 'android') ? 20 : 0,
                 backgroundColor: '#EE5350'
             },
             headerTintColor: '#FFF',

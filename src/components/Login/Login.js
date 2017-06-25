@@ -37,6 +37,7 @@ class Login extends Component {
                         style={inputStyle}
                         keyboardType="email-address"
                         placeholder="Email"
+                        underlineColorAndroid='transparent'
                         onChangeText={email => { this.setState({ email }) }}
                         value={this.state.email}
                     />
@@ -48,6 +49,7 @@ class Login extends Component {
                         style={inputStyle}
                         secureTextEntry
                         placeholder="Password"
+                        underlineColorAndroid='transparent'
                         onChangeText={password => { this.setState({ password }) }}
                         value={this.state.password}
                     />

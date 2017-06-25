@@ -1,5 +1,6 @@
 import React from 'react'
 import { StackNavigator, Button, Text } from 'react-navigation'
+import { Platform } from 'react-native'
 
 // screens
 import CategoriesScreen from '../screens/CategoriesScreen'
@@ -23,6 +24,8 @@ export const RootNav = StackNavigator({
         navigationOptions: ({ navigation }) => ({
             title: `Cork Screen`,
             headerStyle: {
+                height: (Platform.OS === 'android') ? 64 : 40,
+                paddingTop: (Platform.OS === 'android') ? 20 : 0,
                 backgroundColor: '#EE5350'
 
             },
