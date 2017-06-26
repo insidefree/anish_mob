@@ -2,46 +2,55 @@
     {
         "categoryId": "cat_1",
         "title": "Shelters",
-        "navigate": "AnimalListScreen"
+        "navigate": "AnimalListScreen",
+        "iconImageName": "shelters"
     },
     {
         "categoryId": "cat_2",
         "title": "Veterinary clinics",
-        "navigate": "CorkScreen"
+        "navigate": "CorkScreen",
+        "iconImageName": "veterinarian"
     },
     {
         "categoryId": "cat_3",
         "title": "Colobaration",
-        "navigate": "CorkScreen"
+        "navigate": "CorkScreen",
+        "iconImageName": "fosters"
     },
     {
         "categoryId": "cat_4",
-        "title": "Chat",
-        "navigate": "CorkScreen"
+        "title": "Shops",
+        "navigate": "CorkScreen",
+        "iconImageName": "shops"
     },
     {
         "categoryId": "cat_5",
-        "title": "Funny moments",
-        "navigate": "CorkScreen"
+        "title": "Trainers",
+        "navigate": "CorkScreen",
+        "iconImageName": "trainers"
     },
     {
         "categoryId": "cat_6",
-        "title": "Quiz",
-        "navigate": "CorkScreen"
+        "title": "Gardens",
+        "navigate": "CorkScreen",
+        "iconImageName": "gardens"
     },
     {
         "categoryId": "cat_7",
         "title": "Interesting facts",
-        "navigate": "CorkScreen"
+        "navigate": "CorkScreen",
+        "iconImageName": "veterinarian"
     },
     {
         "categoryId": "cat_8",
         "title": "Top users",
-        "navigate": "CorkScreen"
+        "navigate": "CorkScreen",
+        "iconImageName": "veterinarian"
     },
     {
         "categoryId": "cat_9",
         "title": "Left an animal in good hands",
-        "navigate": "CorkScreen"
+        "navigate": "CorkScreen",
+        "iconImageName": "veterinarian"
     }
 ]
