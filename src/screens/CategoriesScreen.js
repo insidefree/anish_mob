@@ -33,7 +33,7 @@ export default class CategoriesScreen extends Component {
             <View style={{ flex: 1 }}>
                 {
                     !this.props.email ?
-                        <Login title="Register" /> :
+                        <Login title="Register"/> :
                         <TouchableOpacity onPress={() => firebaseApp.auth().signOut()}>
                             <Text style={{ padding: 16 }}>Log Out</Text>
                         </TouchableOpacity>

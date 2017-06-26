@@ -34,23 +34,23 @@
         "title": "Gardens",
         "navigate": "CorkScreen",
         "iconImageName": "gardens"
-    },
-    {
-        "categoryId": "cat_7",
-        "title": "Interesting facts",
-        "navigate": "CorkScreen",
-        "iconImageName": "veterinarian"
-    },
-    {
-        "categoryId": "cat_8",
-        "title": "Top users",
-        "navigate": "CorkScreen",
-        "iconImageName": "veterinarian"
-    },
-    {
-        "categoryId": "cat_9",
-        "title": "Left an animal in good hands",
-        "navigate": "CorkScreen",
-        "iconImageName": "veterinarian"
     }
+    // {
+    //     "categoryId": "cat_7",
+    //     "title": "Interesting facts",
+    //     "navigate": "CorkScreen",
+    //     "iconImageName": "veterinarian"
+    // },
+    // {
+    //     "categoryId": "cat_8",
+    //     "title": "Top users",
+    //     "navigate": "CorkScreen",
+    //     "iconImageName": "veterinarian"
+    // },
+    // {
+    //     "categoryId": "cat_9",
+    //     "title": "Left an animal in good hands",
+    //     "navigate": "CorkScreen",
+    //     "iconImageName": "veterinarian"
+    // }
 ]

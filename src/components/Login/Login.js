@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FormLabel, FormInput } from 'react-native-elements'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
 import { Button } from 'react-native-elements'
 
 import { firebaseApp } from '../../config/firebase'
@@ -30,37 +30,39 @@ class Login extends Component {
         const { textStyle, inputStyle, viewStyle, textStyleBtn, buttonStyle } = styles;
         return (
             <View>
-                <View style={viewStyle}>
-                    <Text style={textStyle}>Email</Text>
-                    <TextInput
-                        autoCorrect={false}
-                        style={inputStyle}
-                        keyboardType="email-address"
-                        placeholder="Email"
-                        underlineColorAndroid='transparent'
-                        onChangeText={email => { this.setState({ email }) }}
-                        value={this.state.email}
-                    />
-                </View>
-                <View style={viewStyle}>
-                    <Text style={textStyle}>Password</Text>
-                    <TextInput
-                        autoCorrect={false}
-                        style={inputStyle}
-                        secureTextEntry
-                        placeholder="Password"
-                        underlineColorAndroid='transparent'
-                        onChangeText={password => { this.setState({ password }) }}
-                        value={this.state.password}
-                    />
-                </View>
-                <TouchableOpacity
-                    onPress={this.handleSubmit}
-                    style={buttonStyle}
-                >
-                    <Text style={textStyleBtn}>Sing Up</Text>
-                </TouchableOpacity>
-                {this.state.error.message.length > 0 && <Text>{this.state.error.message}</Text>}
+                <Image source={require('../../assets/menu/loginScreen.jpeg')} style={{height: 200, width: null}}>
+                    <View style={viewStyle}>
+                        <Text style={textStyle}>Email</Text>
+                        <TextInput
+                            autoCorrect={false}
+                            style={inputStyle}
+                            keyboardType="email-address"
+                            placeholder="Email"
+                            underlineColorAndroid='transparent'
+                            onChangeText={email => { this.setState({ email }) }}
+                            value={this.state.email}
+                        />
+                    </View>
+                    <View style={viewStyle}>
+                        <Text style={textStyle}>Password</Text>
+                        <TextInput
+                            autoCorrect={false}
+                            style={inputStyle}
+                            secureTextEntry
+                            placeholder="Password"
+                            underlineColorAndroid='transparent'
+                            onChangeText={password => { this.setState({ password }) }}
+                            value={this.state.password}
+                        />
+                    </View>
+                    <TouchableOpacity
+                        onPress={this.handleSubmit}
+                        style={buttonStyle}
+                    >
+                        <Text style={textStyleBtn}>Sing Up</Text>
+                    </TouchableOpacity>
+                    {this.state.error.message.length > 0 && <Text>{this.state.error.message}</Text>}
+                </Image>
             </View>
         )
     }
@@ -82,7 +84,7 @@ const styles = {
     },
     viewStyle: {
         // flex: 1,
-        height: 40,
+        height: 75,
         flexDirection: 'row',
         alignItems: 'center'
     },
