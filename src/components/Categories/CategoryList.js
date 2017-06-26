@@ -45,8 +45,6 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     alignContent: 'space-around',
-    // height: '100%',
-    // width: null,
     backgroundColor: '#EE5350'
   }
 }
