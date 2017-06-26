@@ -19,12 +19,11 @@ class CategoryListItem extends Component {
     }
 
     render() {
-        const { viewStyle, image, headline, test } = styles;
+        const { viewStyle, image, headline } = styles;
         const { categoryId, title } = this.props.data
         return (
-            <View style={{ borderColor: 'coral' }}>
+            <View style={viewStyle}>
                 <TouchableOpacity
-                    style={test}
                     onPress={() => {
                         this.props.selectCategory(categoryId)
                     }}
@@ -42,26 +41,20 @@ class CategoryListItem extends Component {
 
 const styles = {
     viewStyle: {
-        flex: 1,
-        height: 100,
-        width: 100,
-        borderColor: 'coral',
-        borderWidth: 10
+        // height: 100,
+        // width: 100,
+        margin: 'auto'
     },
     image: {
-        height: 100,
-        width: 100
+        height: 130,
+        width: 130
     },
     headline: {
         // fontSize: 12,
         // textAlign: 'center',
         // backgroundColor: 'rgba(0,0,0,0)',
-        color: 'white'
+        // color: 'white'
     },
-    test: {
-        flexDirection: 'row'
-    }
-
 };
 
 const mapStateToProps = state => ({

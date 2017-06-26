@@ -16,19 +16,20 @@ class CategoryList extends Component {
 
   render() {
     const { navigate } = this.props
-    console.log('list navigate: ', this.props.navigate)
+    const { container, viewFlex } = styles
+
     return (
-      <ScrollView style={styles.container}>
-        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
-          {this.props.categories.map(cat => (
-            <CategoryListItem
-              key={cat.categoryId}
-              data={cat}
-              onPress={(screenName) => navigate(screenName)}
-            />
-          ))}
-        </View>
-      </ScrollView>
+      // <ScrollView style={container}>
+      <View style={viewFlex}>
+        {this.props.categories.map(cat => (
+          <CategoryListItem
+            key={cat.categoryId}
+            data={cat}
+            onPress={(screenName) => navigate(screenName)}
+          />
+        ))}
+      </View>
+      // </ScrollView>
     )
   }
 }
@@ -36,13 +37,24 @@ class CategoryList extends Component {
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection: 'row',
     // borderRadius: 4,
     // borderWidth: 0.5,
     borderColor: '#d6d7da',
     backgroundColor: '#EE5350'
   },
+  viewFlex: {
+    // flex: 1, 
+    // flexDirection: 'row', 
+    // flexWrap: 'wrap',
+    // justifyContent: 'space-around',
+    // alignItems: 'flex-end'
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%'
+  }
 }
 
 
