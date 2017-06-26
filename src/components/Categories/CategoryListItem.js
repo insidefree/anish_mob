@@ -4,7 +4,7 @@ import { NavigationActions } from 'react-navigation'
 
 
 // components
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity, imageContainer, Image } from 'react-native'
 
 // actions
 import { selectCategory } from '../../actions/categoriesAction'
@@ -19,19 +19,17 @@ class CategoryListItem extends Component {
     }
 
     render() {
-        const { viewStyle, image, headline } = styles;
+        const { viewStyle, touchableContainer, image, headline } = styles;
         const { categoryId, title } = this.props.data
         return (
             <View style={viewStyle}>
-                <TouchableOpacity
+                <TouchableOpacity style={touchableContainer}
                     onPress={() => {
                         this.props.selectCategory(categoryId)
                     }}
                 >
-                    <View style={viewStyle}>
-                        <Image style={image} source={require('../../assets/menu/shelters.png')} />
-                        {/*<Text style={headline}>{title}</Text>*/}
-                    </View>
+                    <Image style={image} source={require('../../assets/menu/shelters.png')} />
+                    {/*<Text style={headline}>{title}</Text>*/}
                 </TouchableOpacity>
             </View>
         )
@@ -41,13 +39,16 @@ class CategoryListItem extends Component {
 
 const styles = {
     viewStyle: {
-        // height: 100,
-        // width: 100,
-        margin: 'auto'
+        borderWidth: 5,
+        borderColor: 'coral',
+    },
+    touchableContainer: {
+        alignSelf: 'center'
     },
     image: {
-        height: 130,
-        width: 130
+        height: 100,
+        width: 100,
+        marginLeft: -10
     },
     headline: {
         // fontSize: 12,

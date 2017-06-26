@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ScrollView, Text, View } from 'react-native'
 
+// icons
+// import { createIconSetFromIcoMoon } from '@expo/vector-icons';
+// import icoMoonConfig from '../../assets/menu/anish/selection.json';
+// const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'shelters');
+
 // components
 import CategoryListItem from './CategoryListItem'
 
@@ -19,7 +24,6 @@ class CategoryList extends Component {
     const { container, viewFlex } = styles
 
     return (
-      // <ScrollView style={container}>
       <View style={viewFlex}>
         {this.props.categories.map(cat => (
           <CategoryListItem
@@ -29,31 +33,21 @@ class CategoryList extends Component {
           />
         ))}
       </View>
-      // </ScrollView>
     )
   }
 }
 
 
 const styles = {
-  container: {
-    // borderRadius: 4,
-    // borderWidth: 0.5,
-    borderColor: '#d6d7da',
-    backgroundColor: '#EE5350'
-  },
   viewFlex: {
-    // flex: 1, 
-    // flexDirection: 'row', 
-    // flexWrap: 'wrap',
-    // justifyContent: 'space-around',
-    // alignItems: 'flex-end'
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-    width: '100%'
+    justifyContent: 'space-around',
+    alignContent: 'space-around',
+    // height: '100%',
+    // width: null,
+    backgroundColor: '#EE5350'
   }
 }
 
