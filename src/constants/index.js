@@ -5,3 +5,6 @@ export const LOAD_CATEGORIES = 'SELECT_CATEGORIES'
 
 // Firebase
 export const LOGIN_USER = 'LOGIN_USER'
+
+// Animals
+export const SELECT_ANIMAL = 'SELECT_ANIMAL'

@@ -1,6 +1,6 @@
 [
     {
-        "id": "cat_1",
+        "id": "luna_id",
         "sub_id": "sub_cat_id_1",
         "name": "Luna",
         "age": "6 mounth",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "id": "cat_1",
+        "id": "pumba_id",
         "sub_id": "sub_cat_id_2",
         "name": "Luna",
         "age": "6 mounth",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "id": "cat_1",
+        "id": "sherlock_id",
         "sub_id": "sub_cat_id_3",
         "name": "Luna",
         "age": "6 mounth",
