@@ -1,4 +1,4 @@
-import { SELECT_CATEGORY, NAVIGATE_TO_CAT_BY_ID } from '../constants'
+import { SELECT_CATEGORY } from '../constants'
 
 
 const INIT_STATE = {

@@ -1,6 +1,5 @@
 import { SELECT_CATEGORY, LOAD_CATEGORIES } from '../constants'
 
-
 // fake data
 import categories from '../fakeData/categories'
 

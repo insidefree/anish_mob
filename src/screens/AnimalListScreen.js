@@ -4,7 +4,7 @@ import Expo from 'expo'
 import { Button } from 'react-native-elements'
 
 // components
-import { AnimalList } from '../components/AnimalList/AnimalList'
+import AnimalList from '../components/AnimalList/AnimalList'
 import Header from '../components/common/Header'
 import TestComp from '../components/TestComp/TestComp'
 

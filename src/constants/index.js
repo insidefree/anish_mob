@@ -8,3 +8,4 @@ export const LOGIN_USER = 'LOGIN_USER'
 
 // Animals
 export const SELECT_ANIMAL = 'SELECT_ANIMAL'
+export const LOAD_ANIMALS = 'LOAD_ANIMAL'

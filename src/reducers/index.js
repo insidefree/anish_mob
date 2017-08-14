@@ -1,13 +1,16 @@
 import { combineReducers } from 'redux'
 
 
-// reducers
+// category reducers
 import categories from './categoriesReducer'
 import selectCategory from './selectCategory'
-import selectAnimal from './selectAnimal'
+
+// animal reducers
+import animals from './animalsReducers'
+// import animals from './animalsReducers'
 
 export default combineReducers({
     categories,
     selectCategory,
-    selectAnimal
+    animals
 })
