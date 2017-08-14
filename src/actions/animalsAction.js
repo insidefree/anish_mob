@@ -10,7 +10,10 @@ export const selectAnimal = animalID => ({
 })
 
 
-export const loadAnimals = () => ({
-    type: LOAD_ANIMALS,
-    payload: animals
-})
+export const loadAnimals = () => {
+    console.log('my_action')
+    return {
+        type: LOAD_ANIMALS,
+        payload: animals
+    }
+}

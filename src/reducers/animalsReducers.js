@@ -1,13 +1,13 @@
 import { SELECT_ANIMAL, LOAD_ANIMALS } from '../constants'
 
 
-const INIT_STATE = {
+const INITIAL_STATE = {
     selectAnimal: null,
     animals: []
 }
 
 
-export default (state, action) => {
+export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case SELECT_ANIMAL:
             return {

@@ -1,8 +1,10 @@
 import { LOAD_CATEGORIES } from '../constants'
 
+
 const INITIAL_STATE = {
     categoryList: []
 }
+
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {

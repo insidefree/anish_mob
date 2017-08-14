@@ -22,7 +22,7 @@ class CategoryList extends Component {
   render() {
     const { navigate } = this.props
     const { container, viewFlex } = styles
-
+    console.log('state_categorie: ', this.props)
     return (
       <View style={viewFlex}>
         {this.props.categories.map(cat => (
