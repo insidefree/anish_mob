@@ -3,6 +3,8 @@ import { SELECT_ANIMAL, LOAD_ANIMALS } from '../constants'
 // fakedata
 import animals from '../fakeData/animals'
 
+// config
+import { animalsRef } from '../config/firebase'
 
 export const selectAnimal = animalID => ({
     type: SELECT_ANIMAL,

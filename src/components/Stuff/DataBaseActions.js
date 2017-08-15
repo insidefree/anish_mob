@@ -25,6 +25,14 @@ export default class DataBaseActions extends Component {
         animalsRef.remove()
     }
 
+    showAnimalsFromDB = () => {
+        let count = 0
+        animalsRef.on('value', snapshot => {
+            console.log(count++)
+            console.log(snapshot.val())
+        })
+    }
+
     render() {
         console.log('fakeAnimals: ', fakeAnimals)
         return (
@@ -42,6 +50,13 @@ export default class DataBaseActions extends Component {
                     backgroundColor='blue'
                     title='Clear animals data'
                     onPress={() => this.onClear()}
+                />
+                <Button 
+                    large
+                    color='white'
+                    backgroundColor='red'
+                    title='showAnimalsFromDB'
+                    onPress={() => this.showAnimalsFromDB()}
                 />
             </View>
         )

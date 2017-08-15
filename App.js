@@ -21,7 +21,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
   }
 })
 
-store.subscribe(() => console.log('store subscribe: ', store.getState()))
+// store.subscribe(() => console.log('store subscribe: ', store.getState()))
 // end firebase connect
 
 
