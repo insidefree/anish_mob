@@ -18,3 +18,9 @@ project(':react-native-navigation').projectDir = new File(rootProject.projectDir
 
 *** it's for react-elements:
 react-native link react-native-vector-icons
+
+
+*** publish project to expo
+https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md#ejecting-from-create-react-native-app
+$ npm i -g exp
+$ exp publish

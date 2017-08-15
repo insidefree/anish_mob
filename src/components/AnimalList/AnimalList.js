@@ -7,21 +7,11 @@ import { AnimalListItem } from './AnimalListItem'
 // actions
 import { loadAnimals } from '../../actions/animalsAction'
 
-// temp
-import animals from '../../fakeData/animals'
-
 // config
 import { animalsRef } from '../../config/firebase'
 
 
 class AnimalList extends Component {
-    constructor() {
-        super();
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-        this.state = {
-            dataSource: ds.cloneWithRows([])
-        };
-    }
 
     componentWillMount() {
         console.log('loadAnimals: ', this.props.loadAnimals())
@@ -37,16 +27,8 @@ class AnimalList extends Component {
         })
     }
 
-    componentDidMount() {
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-        this.setState({
-            dataSource: ds.cloneWithRows(this.props.animalsList)
-        })
-    }
-
     render() {
-        console.log('animalsList:', this.props.animalsList)
-        console.log('STATE PRINT: ', this.props)
+        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         return (
             <Image source={require('../../assets/BG-01-black.jpg')} style={{
                 flex: 1,
@@ -55,13 +37,11 @@ class AnimalList extends Component {
                 height: null
             }}>
                 <ListView style={{ flex: 1 }}
-                    dataSource={this.state.dataSource}
+                    dataSource={ds.cloneWithRows(this.props.animalsList)}
                     renderRow={animal => <AnimalListItem animal={animal} />}
                 />
-
-
             </Image>
-        );
+        )
     }
 }
 

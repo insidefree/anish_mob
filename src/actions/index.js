@@ -2,4 +2,4 @@
 export import { selectCategory } from './categoriesAction'
 
 // animalsAction
-export import { selectAnimal } from './animalsAction'
+export import { loadAnimals } from './animalsAction'

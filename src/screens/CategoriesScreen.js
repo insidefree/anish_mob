@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, Image, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Platform, Button } from 'react-native'
 
 
 // components
@@ -39,6 +39,13 @@ export default class CategoriesScreen extends Component {
                         </TouchableOpacity>
                 }
                 <CategoryList navigate={this.props.navigation.navigate} />
+                <Button 
+                    large
+                    color='red'
+                    backgroundColor='blue'
+                    title='DataBase manager'
+                    onPress={() => {this.props.navigation.navigate('StuffScreen')}}
+                />
             </View>
         )
     }

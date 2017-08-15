@@ -6,7 +6,6 @@ const uri = 'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg';
 export class AnimalListItem extends Component {
     render() {
         const { animal } = this.props
-        console.log(animal)
         return (
             <View style={{
                 marginVertical: 8,

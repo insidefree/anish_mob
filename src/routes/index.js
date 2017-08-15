@@ -7,6 +7,7 @@ import CategoriesScreen from '../screens/CategoriesScreen'
 import AnimalListScreen from '../screens/AnimalListScreen'
 import CorkScreen from '../screens/CorkScreen'
 import AddFormScreen from '../screens/AddFormScreen'
+import StuffScreen from '../screens/StuffScreen'
 
 // components
 import CategoryListItem from '../components/Categories/CategoryListItem'
@@ -44,5 +45,8 @@ export const RootNav = StackNavigator({
     },
     AddFormScreen: {
         screen: AddFormScreen
+    },
+    StuffScreen: {
+        screen: StuffScreen
     }
 })
