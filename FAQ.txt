@@ -15,6 +15,9 @@ work_comp_win7: C:\Users\denys-s\AppData\Local\Android\sdk\emulator
 8.Back in your terminal, still in the tools directory, enter ./android avd which will launch the Android Virtual Device Manager.
 9.Click “New” and fill out the form to build the device you’d like to emulate. In the “Target” dropdown, you’ll see the SDK Platforms that you installed earlier. If the version you need is missing, you need to go back and install it. Click OK when you’re done.
 10.Click on the device that you just created and click the “Start” button, tweak any options that you need on the Launch Options window, and click “Launch”.
+
+https://stuff.mit.edu/afs/sipb/project/android/docs/tools/devices/managing-avds-cmdline.html
+
 ***
 Windows 7
 C:\Users\denys-s\AppData\Local\Android\sdk\emulator
