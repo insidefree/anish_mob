@@ -29,7 +29,7 @@ class AnimalList extends Component {
     }
 
     render() {
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2, sectionHeaderHasChanged: (s1, s2) => s1 !== s2});
         // this.props.animalsList.on('value', snap => console.log('LIST2: ', snap))
         return (
             <Image source={require('../../assets/BG-01-black.jpg')} style={{
