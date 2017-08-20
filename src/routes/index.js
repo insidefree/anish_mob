@@ -1,5 +1,4 @@
-import React from 'react'
-import { StackNavigator, Button, Text } from 'react-navigation'
+import { StackNavigator } from 'react-navigation'
 import { Platform } from 'react-native'
 
 // screens
@@ -8,10 +7,8 @@ import AnimalListScreen from '../screens/AnimalListScreen'
 import CorkScreen from '../screens/CorkScreen'
 import AddFormScreen from '../screens/AddFormScreen'
 import StuffScreen from '../screens/StuffScreen'
-
-// components
-import CategoryListItem from '../components/Categories/CategoryListItem'
-
+// import { LoginScreen } from '../screens/LoginScreen'
+// import Chat from '../screens/Chat'
 
 export const RootNav = StackNavigator({
     AnimalListScreen: {
@@ -49,4 +46,10 @@ export const RootNav = StackNavigator({
     StuffScreen: {
         screen: StuffScreen
     }
+    // Authorized: {
+    //     screen: Chat
+    // },
+    // Unauthorized: {
+    //     screen: LoginScreen
+    // }
 })
