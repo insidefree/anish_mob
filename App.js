@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, AppRegistry } from 'react-native'
 import { Provider } from 'react-redux'
 
 // routes
@@ -11,6 +11,7 @@ import store from './src/store'
 // config
 import { firebaseApp } from './src/config/firebase'
 
+import AppNavigator from './src/AppNavigator'
 
 // firebase connect
 firebaseApp.auth().onAuthStateChanged(user => {
@@ -29,8 +30,10 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <RootNav />
+        <AppNavigator />
       </Provider>
     )
   }
 }
+
+AppRegistry.registerComponent('facebook_login', () => App)

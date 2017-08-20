@@ -12,20 +12,21 @@ import { selectCategory } from '../../actions/categoriesAction'
 
 class CategoryListItem extends Component {
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.selectedCategory !== nextProps.selectedCategory) {
-            this.props.onPress(nextProps.selectedCategory.navigate)
-        }
-    }
+    // componentWillReceiveProps(nextProps) {
+    //     if (this.props.selectedCategory !== nextProps.selectedCategory) {
+    //         this.props.onPress(nextProps.selectedCategory.navigate)
+    //     }
+    // }
 
     render() {
         const { viewStyle, iconContainer, image, headline } = styles;
-        const { categoryId, title } = this.props.data
+        const { categoryId, title, navigate } = this.props.data
         return (
             <View style={viewStyle}>
                 <TouchableOpacity
                     onPress={() => {
                         this.props.selectCategory(categoryId)
+                        this.props.onPress(navigate)
                     }}
                 >
                     <View style={iconContainer}>

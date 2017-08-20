@@ -9,8 +9,14 @@ import selectCategory from './selectCategory'
 import animals from './animalsReducers'
 // import animals from './animalsReducers'
 
+// auth reducers
+import auth from './auth'
+import navigation from './navigation'
+
 export default combineReducers({
     categories,
     selectCategory,
-    animals
+    animals,
+    auth,
+    nav: navigation
 })
