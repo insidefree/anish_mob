@@ -3,6 +3,7 @@ https://developer.android.com/studio/run/emulator-commandline.html
 
 emulator -list-avds
 emulator -avd avd_name
+emulator -avd avd_name -gpu host -> if black screen on load
 work_comp_win7: C:\Users\denys-s\AppData\Local\Android\sdk\emulator
 
 1.Download and extract the SDK. https://developer.android.com/studio/index.html
