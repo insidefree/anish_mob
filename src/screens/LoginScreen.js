@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import { connect } from 'react-redux'
 
-export default class LoginScreen extends Component {
+class LoginScreen extends Component {
     componentDidMount() {
         console.log('componentDidMount', this.props)
     }
@@ -16,12 +16,12 @@ export default class LoginScreen extends Component {
     }
 }
 
-// const mapStateToProps = (state) => {
-//     console.log(state)
-//     return {
-//         logged: state.auth.loggedIn,
-//         user: state.auth.user
-//     }
-// }
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        logged: state.auth.loggedIn,
+        user: state.auth.user
+    }
+}
 
-// export default connect(mapStateToProps)(LoginScreen)
+export default connect(mapStateToProps)(LoginScreen)
