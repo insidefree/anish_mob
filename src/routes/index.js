@@ -49,7 +49,7 @@ const RootNav = StackNavigator({
     Authorized: {
         screen: Chat
     },
-    Unauthorized: {
+    LoginScreen: {
         screen: LoginScreen
     }
 })
