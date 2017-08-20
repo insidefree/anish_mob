@@ -10,13 +10,13 @@ import animals from './animalsReducers'
 // import animals from './animalsReducers'
 
 // auth reducers
-// import auth from './auth'
-// import navigation from './navigation'
+import auth from './auth'
+import navigation from './navigation'
 
 export default combineReducers({
     categories,
     selectCategory,
     animals,
-    // auth,
-    // navigation
+    auth,
+    nav: navigation
 })

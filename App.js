@@ -11,7 +11,7 @@ import store from './src/store'
 // config
 import { firebaseApp } from './src/config/firebase'
 
-//import { AppNavigator } from './src/AppNavigator'
+import AppNavigator from './src/AppNavigator'
 
 // firebase connect
 firebaseApp.auth().onAuthStateChanged(user => {
@@ -26,14 +26,14 @@ firebaseApp.auth().onAuthStateChanged(user => {
 // end firebase connect
 
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <RootNav />
+        <AppNavigator />
       </Provider>
     )
   }
 }
 
-// AppRegistry.registerComponent('facebook_login', () => App)
+AppRegistry.registerComponent('facebook_login', () => App)

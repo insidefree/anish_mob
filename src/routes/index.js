@@ -7,10 +7,10 @@ import AnimalListScreen from '../screens/AnimalListScreen'
 import CorkScreen from '../screens/CorkScreen'
 import AddFormScreen from '../screens/AddFormScreen'
 import StuffScreen from '../screens/StuffScreen'
-// import { LoginScreen } from '../screens/LoginScreen'
-// import Chat from '../screens/Chat'
+import LoginScreen from '../screens/LoginScreen'
+import Chat from '../screens/Chat'
 
-export const RootNav = StackNavigator({
+const RootNav = StackNavigator({
     AnimalListScreen: {
         screen: AnimalListScreen
     },
@@ -45,11 +45,13 @@ export const RootNav = StackNavigator({
     },
     StuffScreen: {
         screen: StuffScreen
+    },
+    Authorized: {
+        screen: Chat
+    },
+    Unauthorized: {
+        screen: LoginScreen
     }
-    // Authorized: {
-    //     screen: Chat
-    // },
-    // Unauthorized: {
-    //     screen: LoginScreen
-    // }
 })
+
+export default RootNav
