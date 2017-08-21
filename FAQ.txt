@@ -38,3 +38,8 @@ react-native link react-native-vector-icons
 https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md#ejecting-from-create-react-native-app
 $ npm i -g exp
 $ exp publish
+
+ERRORS
+1. could not install *smartsocket* listener: cannot bind to 127.0.0.1:5037: Only one usage of each socket address (protocol/network address/port) is normally permitted. (10048)
+could not read ok from ADB Server
+http://www.fatalerrors.org/a/could-not-install-smartsocket-listener-cannot-bind-to-127.0.0.1.html
