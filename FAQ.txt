@@ -24,3 +24,9 @@ react-native link react-native-vector-icons
 https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md#ejecting-from-create-react-native-app
 $ npm i -g exp
 $ exp publish
+
+
+*** How do I update each dependency in package.json to the latest version?
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
