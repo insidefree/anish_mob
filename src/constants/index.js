@@ -11,4 +11,9 @@ export const SELECT_ANIMAL = 'SELECT_ANIMAL'
 export const LOAD_ANIMALS = 'LOAD_ANIMAL'
 
 // Chat
+// export const LOGIN = 'LOGIN'
+
+
+// Authenticate
 export const LOGIN = 'LOGIN'
+export const LOGOUT = 'LOGOUT'
