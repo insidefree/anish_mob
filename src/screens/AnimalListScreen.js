@@ -35,13 +35,6 @@ export default class AnimalListScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <AnimalList />
-                <Button
-                    title='Press ME'
-                    onPress={() => this.props.navigation.navigate('AddFormScreen')} />
-                <Button 
-                    title='Move to StuffScreen'
-                    onPress={() => this.props.navigation.navigate('StuffScreen')}
-                />
             </View>
         )
     }
