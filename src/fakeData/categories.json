@@ -8,7 +8,7 @@
     {
         "categoryId": "cat_2",
         "title": "Login",
-        "navigate": "LoginScreen",
+        "navigate": "Unauthorized",
         "iconImageName": "login"
     },
     {

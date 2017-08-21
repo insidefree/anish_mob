@@ -17,7 +17,7 @@ class LoginScreen extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
+    console.log('mapStateToProps', state)
     return {
         logged: state.auth.loggedIn,
         user: state.auth.user

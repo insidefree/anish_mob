@@ -44,3 +44,7 @@ $ exp publish
 npm i -g npm-check-updates
 npm-check-updates -u
 npm install
+
+
+*** debugger
+https://github.com/jhen0409/react-native-debugger
