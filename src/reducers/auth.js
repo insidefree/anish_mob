@@ -1,4 +1,4 @@
-import { LOGIN } from '../actions/chat'
+import { LOGIN } from '../constants/index'
 
 const INITIAL = {
     loggedIn: false,

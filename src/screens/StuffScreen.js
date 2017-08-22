@@ -8,7 +8,7 @@ export default class StuffScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <DataBaseActions />
+                <DataBaseActions navigation={this.props.navigation}/>
             </View>
         )
     }
