@@ -39,6 +39,10 @@ https://github.com/react-community/create-react-native-app/blob/master/react-nat
 $ npm i -g exp
 $ exp publish
 
+ERRORS
+1. could not install *smartsocket* listener: cannot bind to 127.0.0.1:5037: Only one usage of each socket address (protocol/network address/port) is normally permitted. (10048)
+could not read ok from ADB Server
+http://www.fatalerrors.org/a/could-not-install-smartsocket-listener-cannot-bind-to-127.0.0.1.html
 
 *** How do I update each dependency in package.json to the latest version?
 npm i -g npm-check-updates
