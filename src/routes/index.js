@@ -8,14 +8,22 @@ import CorkScreen from '../screens/CorkScreen'
 import AddFormScreen from '../screens/AddFormScreen'
 import StuffScreen from '../screens/StuffScreen'
 import LoginScreen from '../screens/LoginScreen'
+import HomeScreen from '../screens/HomeScreen'
+import CreateNewAnimalItemScreen from '../screens/CreateNewAnimalItemScreen'
 import Chat from '../screens/Chat'
 
 const RootNav = StackNavigator({
+    HomeScreen: {
+        screen: HomeScreen
+    },
     AnimalListScreen: {
         screen: AnimalListScreen
     },
     CategoriesScreen: {
         screen: CategoriesScreen
+    },
+    CreateNewAnimalItemScreen:{
+        screen: CreateNewAnimalItemScreen
     },
     CorkScreen: {
         screen: CorkScreen,

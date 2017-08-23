@@ -1,7 +1,7 @@
-import React from 'react'
-import { StyleSheet, Text, View, AppRegistry } from 'react-native'
+import Expo from 'expo'
+import React, { Component } from 'react'
+import { View, Text, Image, NetInfo } from 'react-native'
 import { Provider } from 'react-redux'
-
 // routes
 import { RootNav } from './src/routes'
 // actions
@@ -26,14 +26,38 @@ firebaseApp.auth().onAuthStateChanged(user => {
 // end firebase connect
 
 
-export default class App extends React.Component {
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      online: true
+    }
+    console.ignoredYellowBox = ['Setting timer']
+  }
+
+  async componentWillMount() {
+    await Expo.Font.loadAsync({
+      'Roboto': require('native-base/Fonts/Roboto.ttf'),
+      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf')
+    })
+  }
+
+  componentWillUpdate(nextState, nextProps) {
+    // NetInfo.isConnected.fetch().then(isConnected => {
+    //   this.setState({ online: isConnected });
+    // });
+  }
+
   render() {
     return (
       <Provider store={store}>
-        <AppNavigator />
+        {
+          this.state.online ? <AppNavigator /> :
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+              <Text style={{ fontSize: 22, textAlign: 'center' }}>Required internet</Text>
+            </View>
+        }
       </Provider>
     )
   }
 }
-
-AppRegistry.registerComponent('facebook_login', () => App)
