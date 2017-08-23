@@ -36,4 +36,4 @@ export default class App extends React.Component {
   }
 }
 
-AppRegistry.registerComponent('facebook_login', () => App)
+AppRegistry.registerComponent('Anish', () => App)
