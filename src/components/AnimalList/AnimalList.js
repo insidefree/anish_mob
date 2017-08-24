@@ -5,21 +5,21 @@ import { connect } from 'react-redux'
 import { AnimalListItem } from './AnimalListItem'
 
 // actions
-import { loadAnimals } from '../../actions/animalsAction'
+import { fetchAnimals } from '../../actions/animalsAction'
 
 // config
-import { animalsRef } from '../../config/firebase'
+// import { animalsRef } from '../../config/firebase'
 
 
 class AnimalList extends Component {
-    componentDidMount(){
+    componentDidMount() {
         console.log('animalList')
     }
 
     componentWillMount() {
-        console.log('loadAnimals: ', this.props.loadAnimals())
-        this.props.loadAnimals()
-        console.log('LIST1:', this.props.animalsList)
+        // console.log('fetchAnimals: ', this.props.fetchAnimals())
+        this.props.fetchAnimals()
+        //console.log('LIST1:', this.props.animalsList)
         // animalsRef.on('value', snap => {
         //     console.log(snap)
         //     let animals = [];
@@ -32,7 +32,9 @@ class AnimalList extends Component {
     }
 
     render() {
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2});
+        const { animalsList } = this.props
+        console.log('animalsList component: ', animalsList)
+        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         // this.props.animalsList.on('value', snap => console.log('LIST2: ', snap))
         return (
             <Image source={require('../../assets/BG-01-black.jpg')} style={{
@@ -52,8 +54,9 @@ class AnimalList extends Component {
 
 
 const mapStateToProps = state => ({
-    animalsList: state.animals.animals
+    animalsList: state.animals.animalsList,
+    loading: state.animals.loading
 })
 
 
-export default connect(mapStateToProps, { loadAnimals })(AnimalList)
+export default connect(mapStateToProps, { fetchAnimals })(AnimalList)

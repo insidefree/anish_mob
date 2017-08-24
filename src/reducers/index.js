@@ -6,8 +6,7 @@ import categories from './categoriesReducer'
 import selectCategory from './selectCategory'
 
 // animal reducers
-import animals from './animalsReducers'
-// import animals from './animalsReducers'
+import animals from './animalsReducer'
 
 // auth reducers
 import auth from './auth'
