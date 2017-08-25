@@ -1,5 +1,5 @@
-import Expo from 'expo'
 import React, { Component } from 'react'
+import Expo from 'expo'
 import { View, Text, Image, NetInfo } from 'react-native'
 import { Provider } from 'react-redux'
 // routes
@@ -30,18 +30,20 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      online: true
+      online: true,
+      isReady: false
     }
     console.ignoredYellowBox = ['Setting timer']
   }
 
   async componentWillMount() {
     await Expo.Font.loadAsync({
-      'Roboto': require('native-base/Fonts/Roboto.ttf'),
-      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf')
-    })
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      Ionicons: require("native-base/Fonts/Ionicons.ttf")
+    });
+    this.setState({ isReady: true });
   }
-
   componentWillUpdate(nextState, nextProps) {
     // NetInfo.isConnected.fetch().then(isConnected => {
     //   this.setState({ online: isConnected });
@@ -49,15 +51,16 @@ export default class App extends Component {
   }
 
   render() {
-    return (
-      <Provider store={store}>
-        {
-          this.state.online ? <AppNavigator /> :
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text style={{ fontSize: 22, textAlign: 'center' }}>Required internet</Text>
-            </View>
-        }
-      </Provider>
-    )
+    if (!this.state.isReady) {
+      return <Expo.AppLoading />
+    }
+    return <Provider store={store}>
+      {
+        this.state.online ? <AppNavigator /> :
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ fontSize: 22, textAlign: 'center' }}>Required internet</Text>
+          </View>
+      }
+    </Provider>
   }
 }

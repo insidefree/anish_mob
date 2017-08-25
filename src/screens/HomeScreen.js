@@ -16,7 +16,7 @@ class HomeScreen extends Component {
 				<Container>
 					<Content>
 						
-							<Text style={styles.primaryText}>DOBROTA</Text>
+							<Text>DOBROTA</Text>
 							
 
 								<Button
@@ -44,30 +44,30 @@ class HomeScreen extends Component {
 					</Content>
 				</Container>
 			</Image>
-		);
+		)
 	}
 }
 
-const styles = StyleSheet.create({
-	viewStyle: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	primaryText: {
-		fontSize: 40,
-		padding: 16,
-		color: '#383838',
-		fontWeight: '200',
-		backgroundColor: 'rgba(0,0,0,0)',
-	},
-	smallText: {
-		fontSize: 23,
-		padding: 16,
-		color: '#383838',
-		fontWeight: '200',
-	}
-});
+// const styles = StyleSheet.create({
+// 	viewStyle: {
+// 		flex: 1,
+// 		justifyContent: 'center',
+// 		alignItems: 'center',
+// 	},
+// 	primaryText: {
+// 		fontSize: 40,
+// 		padding: 16,
+// 		color: '#383838',
+// 		fontWeight: '200',
+// 		backgroundColor: 'rgba(0,0,0,0)',
+// 	},
+// 	smallText: {
+// 		fontSize: 23,
+// 		padding: 16,
+// 		color: '#383838',
+// 		fontWeight: '200',
+// 	}
+// });
 
 export default HomeScreen
 // export default connectStyle('yourTheme.HomeScreen', styles)(HomeScreen);

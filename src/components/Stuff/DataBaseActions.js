@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { StyleSheet, View } from 'react-native'
 // import { View, Text, TextInput, ToastAndroid, Platform } from 'react-native'
 import { connectStyle, Button, Text, Icon, Container, Content } from 'native-base';
 // import { Button } from 'react-native-elements'
@@ -36,7 +37,10 @@ export default class DataBaseActions extends Component {
 
     render() {
         return (
-            <Container>
+            <Container style={{ flex: 1,
+                backgroundColor: '#fff',
+                alignItems: 'center',
+                justifyContent: 'center'}}>
                 <Content>
                     <Button
                         block
@@ -71,3 +75,13 @@ export default class DataBaseActions extends Component {
         )
     }
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
