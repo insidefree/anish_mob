@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, ToastAndroid, Platform } from 'react-native'
-import { Button } from 'react-native-elements'
+// import { View, Text, TextInput, ToastAndroid, Platform } from 'react-native'
+import { connectStyle, Button, Text, Icon, Container, Content } from 'native-base';
+// import { Button } from 'react-native-elements'
 
 // config
 import { animalsRef } from '../../config/firebase'
@@ -34,35 +35,39 @@ export default class DataBaseActions extends Component {
     }
 
     render() {
-        console.log('fakeAnimals: ', fakeAnimals)
         return (
-            <View style={{ flex: 1 }}>
-                <Button
-                    large
-                    color='white'
-                    backgroundColor='coral'
-                    title='Upload fake data to the server'
-                    onPress={() => this.onSubmit()}
-                />
-                <Button
-                    large
-                    color='white'
-                    backgroundColor='blue'
-                    title='Clear animals data'
-                    onPress={() => this.onClear()}
-                />
-                <Button
-                    large
-                    color='white'
-                    backgroundColor='red'
-                    title='showAnimalsFromDB'
-                    onPress={() => this.showAnimalsFromDB()}
-                />
-                <Button
-                    title='Move to AddFormScreen - test add animal form'
-                    onPress={() => this.props.navigation.navigate('AddFormScreen')} 
-                />
-            </View>
+            <Container>
+                <Content>
+                    <Button
+                        block
+                        info
+                        onPress={() => this.onSubmit()}
+                    >
+                        <Text>Upload fake data to the server</Text>
+                    </Button>
+                    <Button
+                        block
+                        info
+                        onPress={() => this.onClear()}
+                    >
+                        <Text>Clear animals data</Text>
+                    </Button>
+                    <Button
+                        block
+                        info
+                        onPress={() => this.showAnimalsFromDB()}
+                    >
+                        <Text>Show animals from DB - console</Text>
+                    </Button>
+                    <Button
+                        block
+                        info
+                        onPress={() => this.props.navigation.navigate('AddFormScreen')}
+                    >
+                        <Text>Move to AddFormScreen - test add animal form</Text>
+                    </Button>
+                </Content>
+            </Container>
         )
     }
 }
