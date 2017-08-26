@@ -260,10 +260,16 @@ export default (variables = variable) => {
 
     ".block": {
       justifyContent: "center",
+      alignSelf: "stretch"
+    },
+    ".blockAnish": {
+      flex: 1,
+      justifyContent: "center",
       alignSelf: "stretch",
+      // alignItems: "stretch",
+      // alignItems: 'center',
       marginBottom: 10
     },
-
     ".full": {
       justifyContent: "center",
       alignSelf: "stretch",
@@ -470,7 +476,7 @@ export default (variables = variable) => {
     elevation: 2,
     shadowColor: platformStyle === "material" ? "#000" : undefined,
     shadowOffset:
-      platformStyle === "material" ? { width: 0, height: 2 } : undefined,
+    platformStyle === "material" ? { width: 0, height: 2 } : undefined,
     shadowOpacity: platformStyle === "material" ? 0.2 : undefined,
     shadowRadius: platformStyle === "material" ? 1.2 : undefined,
     alignItems: "center",

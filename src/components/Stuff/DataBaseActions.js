@@ -44,32 +44,34 @@ export default class DataBaseActions extends Component {
                 <Container>
                     <Content padder>
                         <Button
-                            block
+                            blockAnish
                             info
                             onPress={() => this.onSubmit()}
                         >
                             <Text>Upload fake data to the server</Text>
                         </Button>
                         <Button
-                            block
+                            blockAnish
                             info
                             onPress={() => this.onClear()}
                         >
                             <Text>Clear animals data</Text>
                         </Button>
                         <Button
-                            block
+                            blockAnish
                             info
                             onPress={() => this.showAnimalsFromDB()}
                         >
                             <Text>Show animals from DB - console</Text>
                         </Button>
                         <Button
-                            block
+                            blockAnish
                             info
+                            iconLeft
                             onPress={() => this.props.navigation.navigate('AddFormScreen')}
                         >
-                            <Text>Move to AddFormScreen - test add animal form</Text>
+                            <Icon name='attach' style={{fontSize: 20, color: 'red'}}/>
+                            <Text>Test: Add animal form</Text>
                         </Button>
                     </Content>
                 </Container>
