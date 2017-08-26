@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ListView, Text, Image } from 'react-native'
 import { connect } from 'react-redux'
+import { Container, Content } from 'native-base';
 // components
 import { AnimalListItem } from './AnimalListItem'
 
@@ -43,10 +44,15 @@ class AnimalList extends Component {
                 width: null,
                 height: null
             }}>
-                <ListView style={{ flex: 1 }}
-                    dataSource={ds.cloneWithRows(this.props.animalsList)}
-                    renderRow={animal => <AnimalListItem animal={animal} />}
-                />
+                <Container>
+                    <Content>
+                        <ListView style={{ flex: 1 }}
+                            dataSource={ds.cloneWithRows(this.props.animalsList)}
+                            renderRow={animal => <AnimalListItem animal={animal} />}
+
+                        />
+                    </Content>
+                </Container>
             </Image>
         )
     }

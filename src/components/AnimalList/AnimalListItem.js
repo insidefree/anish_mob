@@ -1,52 +1,51 @@
 import React, { Component } from 'react'
-import { View, Text, Image, TouchableOpacity } from 'react-native'
-
+import { View, Image, TouchableOpacity } from 'react-native'
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Right, Body } from 'native-base';
 
 const uri = 'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg';
 export class AnimalListItem extends Component {
     render() {
         const { animal } = this.props
         return (
-            <View style={{
-                marginVertical: 8,
-                margin: 20,
-                paddingTop: 15,
-                borderBottomColor: '#9f9f9f',
-            }}>
-                <Image style={styles.imageStyle} source={{ uri }} />
-                <View style={styles.cardStyle}>
-                    <Image source={require('../../assets/name.png')} style={{
-                        height: 27,
-                        width: 23
-                    }} />
-                    <Text style={{ backgroundColor: 'transparent' }}>{animal.name}</Text>
-                    <Image source={require('../../assets/age.png')} style={{
-                        height: 27,
-                        width: 27.1,
-                    }} />
-                    <Text style={{ backgroundColor: 'transparent' }}>{animal.age}</Text>
-                    <Image source={require('../../assets/location.png')} style={{
-                        height: 27,
-                        width: 18.7,
-                    }} />
-                    <Text style={{ backgroundColor: 'transparent' }}>{animal.location.city}</Text>
-                </View>
-                <Text style={styles.description}>
-                    Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, hic, temporibus! Saepe excepturi voluptas reprehenderit.
-                </Text>
-                <TouchableOpacity
-                    onPress={() => console.log('btn pressed')}
-                >
-                    <View style={styles.btn}>
-                        <Text style={styles.btnText}>TAKE ME</Text>
-                    </View>
-                </TouchableOpacity>
-                <Image source={require('../../assets/Devider.png')} style={{
-                    height: 2,
-                    width: null,
-                    marginTop: 25
-                }} />
-            </View>
+
+            <Card style={{ flex: 0 }}>
+                <CardItem>
+                    <Left>
+                        <Thumbnail source={{ uri }} />
+                        <Body>
+                            <Text>{animal.name}</Text>
+                            <Text note>Age: {animal.age}</Text>
+                        </Body>
+                    </Left>
+                </CardItem>
+                <CardItem cardBody>
+                    <Image source={{ uri }} style={{ height: 200, width: null, flex: 1 }} />
+
+                </CardItem>
+                <CardItem>
+                    <Text>
+                        Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, hic, temporibus! Saepe excepturi voluptas reprehenderit.
+                    </Text>
+                </CardItem>
+                <CardItem>
+                    <Left>
+                        <Button transparent>
+                            <Icon active name="thumbs-up" />
+                            <Text>12 Likes</Text>
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Button transparent>
+                            <Icon active name="chatbubbles" />
+                            <Text>4 Comments</Text>
+                        </Button>
+                    </Body>
+                    <Right>
+                        <Text>11h ago</Text>
+                    </Right>
+                </CardItem>
+            </Card>
+
         )
     }
 }
