@@ -44,3 +44,9 @@ $ exp publish
 npm i -g npm-check-updates
 npm-check-updates -u
 npm install
+
+
+*** START project
+    Steps to be followed to customize NativeBase:
+    Run this command from your terminal after installing native-base.
+        node node_modules/native-base/ejectTheme.js
