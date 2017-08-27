@@ -13,24 +13,6 @@ class HomeScreen extends Component {
 				source={{ uri: 'https://images.pexels.com/photos/177567/pexels-photo-177567.jpeg?w=940&h=650&auto=compress&cs=tinysrgb' }}
 			>
 				<Container>
-					<Header>
-						<Left>
-							<Button
-								transparent
-								onPress={() => this.props.navigation.navigate("DrawerOpen")}
-							>
-								<Icon name="menu" />
-							</Button>
-						</Left>
-						<Body>
-							<Title>Home Screen</Title>
-						</Body>
-						<Right>
-							<Button transparent>
-								<Icon name='menu' />
-							</Button>
-						</Right>
-					</Header>
 					<Content>
 						<Text>DOBROTA</Text>
 						<Button

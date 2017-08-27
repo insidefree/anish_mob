@@ -7,7 +7,6 @@ export class AnimalListItem extends Component {
     render() {
         const { animal } = this.props
         return (
-
             <Card style={{ flex: 0 }}>
                 <CardItem>
                     <Left>

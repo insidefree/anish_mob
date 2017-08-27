@@ -46,17 +46,18 @@ class AnimalList extends Component {
             }}>
                 <Container>
                     <Header>
-                        <Left>
+                        <Left style={{ flex: 1 }} />
+                        <Body style={{ flex: 1 }}>
+                            <Title>Home Screen</Title>
+                        </Body>
+                        <Right style={{ flex: 1 }}>
                             <Button
                                 transparent
-                                onPress={() => this.props.navigation.navigate("HomeScreen")}
+                                onPress={() => this.props.navigation.navigate("DrawerOpen")}
                             >
-                                <Icon name='arrow-back' />
+                                <Icon name="menu" />
                             </Button>
-                        </Left>
-                        <Body>
-                            <Title>Animals List</Title>
-                        </Body>
+                        </Right>
                     </Header>
                     <Content>
                         <ListView style={{ flex: 1 }}

@@ -13,11 +13,11 @@ import CreateNewAnimalItemScreen from '../screens/CreateNewAnimalItemScreen'
 import Chat from '../screens/Chat'
 
 const RootNav = DrawerNavigator ({
-    HomeScreen: {
-        screen: HomeScreen
-    },
     AnimalListScreen: {
         screen: AnimalListScreen
+    },
+    HomeScreen: {
+        screen: HomeScreen
     },
     CategoriesScreen: {
         screen: CategoriesScreen
