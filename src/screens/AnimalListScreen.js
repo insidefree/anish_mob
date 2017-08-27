@@ -34,7 +34,7 @@ export default class AnimalListScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <AnimalList navigation={this.props.navigation} />
+                <AnimalList />
             </View>
         )
     }

@@ -7,44 +7,45 @@ export class AnimalListItem extends Component {
     render() {
         const { animal } = this.props
         return (
-            <Card style={{ flex: 0 }}>
-                <CardItem>
-                    <Left>
-                        <Thumbnail source={{ uri }} />
-                        <Body>
-                            <Text>{animal.name}</Text>
-                            <Text note>Age: {animal.age}</Text>
-                        </Body>
-                    </Left>
-                </CardItem>
-                <CardItem cardBody>
-                    <Image source={{ uri }} style={{ height: 200, width: null, flex: 1 }} />
+            <View>
+                <Card style={{ flex: 0 }}>
+                    <CardItem>
+                        <Left>
+                            <Thumbnail source={{ uri }} />
+                            <Body>
+                                <Text>{animal.name}</Text>
+                                <Text note>Age: {animal.age}</Text>
+                            </Body>
+                        </Left>
+                    </CardItem>
+                    <CardItem cardBody>
+                        <Image source={{ uri }} style={{ height: 200, width: null, flex: 1 }} />
 
-                </CardItem>
-                <CardItem>
-                    <Text>
-                        Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, hic, temporibus! Saepe excepturi voluptas reprehenderit.
+                    </CardItem>
+                    <CardItem>
+                        <Text>
+                            Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, hic, temporibus! Saepe excepturi voluptas reprehenderit.
                     </Text>
-                </CardItem>
-                <CardItem>
-                    <Left>
-                        <Button transparent>
-                            <Icon active name="thumbs-up" />
-                            <Text>12 Likes</Text>
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Button transparent>
-                            <Icon active name="chatbubbles" />
-                            <Text>4 Comments</Text>
-                        </Button>
-                    </Body>
-                    <Right>
-                        <Text>11h ago</Text>
-                    </Right>
-                </CardItem>
-            </Card>
-
+                    </CardItem>
+                    <CardItem>
+                        <Left>
+                            <Button transparent>
+                                <Icon active name="thumbs-up" />
+                                <Text>12 Likes</Text>
+                            </Button>
+                        </Left>
+                        <Body>
+                            <Button transparent>
+                                <Icon active name="chatbubbles" />
+                                <Text>4 Comments</Text>
+                            </Button>
+                        </Body>
+                        <Right>
+                            <Text>11h ago</Text>
+                        </Right>
+                    </CardItem>
+                </Card>
+            </View>
         )
     }
 }
