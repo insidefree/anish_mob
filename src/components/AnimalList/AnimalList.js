@@ -59,13 +59,11 @@ class AnimalList extends Component {
                             </Button>
                         </Right>
                     </Header>
-                    <Content>
-                        <ListView style={{ flex: 1 }}
-                            dataSource={ds.cloneWithRows(this.props.animalsList)}
-                            renderRow={animal => <AnimalListItem animal={animal} />}
+                    <ListView style={{ flex: 1 }}
+                        dataSource={ds.cloneWithRows(this.props.animalsList)}
+                        renderRow={animal => <AnimalListItem animal={animal} />}
 
-                        />
-                    </Content>
+                    />
                 </Container>
             </Image>
         )
