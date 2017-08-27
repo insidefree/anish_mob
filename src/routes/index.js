@@ -1,4 +1,4 @@
-import { StackNavigator } from 'react-navigation'
+import { DrawerNavigator  } from 'react-navigation'
 import { Platform } from 'react-native'
 
 // screens
@@ -12,7 +12,7 @@ import HomeScreen from '../screens/HomeScreen'
 import CreateNewAnimalItemScreen from '../screens/CreateNewAnimalItemScreen'
 import Chat from '../screens/Chat'
 
-const RootNav = StackNavigator({
+const RootNav = DrawerNavigator ({
     HomeScreen: {
         screen: HomeScreen
     },
@@ -27,26 +27,26 @@ const RootNav = StackNavigator({
     },
     CorkScreen: {
         screen: CorkScreen,
-        navigationOptions: ({ navigation }) => ({
-            title: `Cork Screen`,
-            headerStyle: {
-                height: (Platform.OS === 'android') ? 64 : 55,
-                paddingTop: (Platform.OS === 'android') ? 20 : 15,
-                backgroundColor: '#EE5350'
+        // navigationOptions: ({ navigation }) => ({
+        //     title: `Cork Screen`,
+        //     headerStyle: {
+        //         height: (Platform.OS === 'android') ? 64 : 55,
+        //         paddingTop: (Platform.OS === 'android') ? 20 : 15,
+        //         backgroundColor: '#EE5350'
 
-            },
-            headerTintColor: '#FFF',
-        })
+        //     },
+        //     headerTintColor: '#FFF',
+        // })
     },
     CategoryListItem: {
         screen: AnimalListScreen,
-        navigationOptions: ({ navigation }) => ({
-            title: `Animals List`,
-            headerStyle: {
-                backgroundColor: '#EE5350'
-            },
-            headerTintColor: '#FFF',
-        })
+        // navigationOptions: ({ navigation }) => ({
+        //     title: `Animals List`,
+        //     headerStyle: {
+        //         backgroundColor: '#EE5350'
+        //     },
+        //     headerTintColor: '#FFF',
+        // })
     },
     AddFormScreen: {
         screen: AddFormScreen

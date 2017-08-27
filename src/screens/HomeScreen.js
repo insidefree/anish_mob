@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 // import { Button } from 'react-native-elements';
-import { connectStyle, Button, Text, Icon, Container, Content } from 'native-base';
-
+import { connectStyle, Container, Content, Header, Left, Body, Right, Button, Icon, Title, Text } from 'native-base';
 class HomeScreen extends Component {
 	render() {
 		return (
@@ -14,33 +13,46 @@ class HomeScreen extends Component {
 				source={{ uri: 'https://images.pexels.com/photos/177567/pexels-photo-177567.jpeg?w=940&h=650&auto=compress&cs=tinysrgb' }}
 			>
 				<Container>
+					<Header>
+						<Left>
+							<Button
+								transparent
+								onPress={() => this.props.navigation.navigate("DrawerOpen")}
+							>
+								<Icon name="menu" />
+							</Button>
+						</Left>
+						<Body>
+							<Title>Home Screen</Title>
+						</Body>
+						<Right>
+							<Button transparent>
+								<Icon name='menu' />
+							</Button>
+						</Right>
+					</Header>
 					<Content>
-						
-							<Text>DOBROTA</Text>
-							
-
-								<Button
-									block
-									info
-									onPress={() => this.props.navigation.navigate('AnimalListScreen')}>
-									<Text>Animals List</Text>
-								</Button>
-								<Button
-									block
-									success
-									onPress={() => this.props.navigation.navigate('CreateNewAnimalItemScreen')}>
-									<Text>To place an ad</Text>
-								</Button>
-								<Button
-									block
-									danger
-									iconLeft
-									onPress={() => this.props.navigation.navigate('StuffScreen')}>
-									<Icon name='cog' />
-									<Text>DB manager</Text>
-								</Button>
-							
-						
+						<Text>DOBROTA</Text>
+						<Button
+							block
+							info
+							onPress={() => this.props.navigation.navigate('AnimalListScreen')}>
+							<Text>Animals List</Text>
+						</Button>
+						<Button
+							block
+							success
+							onPress={() => this.props.navigation.navigate('CreateNewAnimalItemScreen')}>
+							<Text>To place an ad</Text>
+						</Button>
+						<Button
+							block
+							danger
+							iconLeft
+							onPress={() => this.props.navigation.navigate('StuffScreen')}>
+							<Icon name='cog' />
+							<Text>DB manager</Text>
+						</Button>
 					</Content>
 				</Container>
 			</Image>

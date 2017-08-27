@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ListView, Text, Image } from 'react-native'
+import { ListView, Image } from 'react-native'
 import { connect } from 'react-redux'
-import { Container, Content } from 'native-base';
+import { Container, Content, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 // components
 import { AnimalListItem } from './AnimalListItem'
 
@@ -45,6 +45,19 @@ class AnimalList extends Component {
                 height: null
             }}>
                 <Container>
+                    <Header>
+                        <Left>
+                            <Button
+                                transparent
+                                onPress={() => this.props.navigation.navigate("HomeScreen")}
+                            >
+                                <Icon name='arrow-back' />
+                            </Button>
+                        </Left>
+                        <Body>
+                            <Title>Animals List</Title>
+                        </Body>
+                    </Header>
                     <Content>
                         <ListView style={{ flex: 1 }}
                             dataSource={ds.cloneWithRows(this.props.animalsList)}
