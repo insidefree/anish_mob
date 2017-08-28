@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ListView, Image } from 'react-native'
 import { connect } from 'react-redux'
-import { Container, Content, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import { Container, Content, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
 // components
 import { AnimalListItem } from './AnimalListItem'
 

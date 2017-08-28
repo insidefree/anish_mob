@@ -1,6 +1,6 @@
 import { DrawerNavigator } from 'react-navigation'
-import { Platform } from 'react-native'
-
+import { Platform, View, ScrollView } from 'react-native'
+import DrawerMenu from '../components/common/DrawerMenu'
 // screens
 import CategoriesScreen from '../screens/CategoriesScreen'
 import AnimalListScreen from '../screens/AnimalListScreen'
@@ -11,6 +11,7 @@ import LoginScreen from '../screens/LoginScreen'
 import HomeScreen from '../screens/HomeScreen'
 import CreateNewAnimalItemScreen from '../screens/CreateNewAnimalItemScreen'
 import Chat from '../screens/Chat'
+
 
 const RootNav = DrawerNavigator({
     AnimalListScreen: {
@@ -61,8 +62,10 @@ const RootNav = DrawerNavigator({
         screen: LoginScreen
     }
 },
+    // navigator config
     {
         drawerPosition: 'right',
+        contentComponent: DrawerMenu
     })
 
 export default RootNav
