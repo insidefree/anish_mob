@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 class LoginScreen extends Component {
     componentDidMount() {
-        console.log('componentDidMount', this.props)
+        // console.log('componentDidMount', this.props)
     }
 
     render() {
@@ -17,7 +17,7 @@ class LoginScreen extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
+    // console.log(state)
     return {
         logged: state.auth.loggedIn,
         user: state.auth.user

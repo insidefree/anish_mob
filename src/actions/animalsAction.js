@@ -30,7 +30,7 @@ export const fetchAnimals = () => {
         //     return dateB - dateA;
         //   });
         //   console.log(sortByDate);
-        console.log('action Animals', animalsList)
+        // console.log('action Animals', animalsList)
         dispatch({
           type: FETCH_ANIMALS_LIST,
           payload: animalsList

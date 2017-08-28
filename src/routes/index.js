@@ -1,4 +1,5 @@
-import { DrawerNavigator } from 'react-navigation'
+import React from 'react'
+import { DrawerNavigator, DrawerView } from 'react-navigation'
 import { Platform, View, ScrollView } from 'react-native'
 import DrawerMenu from '../components/common/DrawerMenu'
 // screens
@@ -11,6 +12,16 @@ import LoginScreen from '../screens/LoginScreen'
 import HomeScreen from '../screens/HomeScreen'
 import CreateNewAnimalItemScreen from '../screens/CreateNewAnimalItemScreen'
 import Chat from '../screens/Chat'
+
+const customComponent = (props) => (
+    <ScrollView
+        style={{
+            flex: 1,
+            backgroundColor: "coral",
+        }}>
+        <DrawerMenu {...props} />
+    </ScrollView>
+);
 
 
 const RootNav = DrawerNavigator({
@@ -65,7 +76,7 @@ const RootNav = DrawerNavigator({
     // navigator config
     {
         drawerPosition: 'right',
-        contentComponent: DrawerMenu
+        contentComponent: props => <DrawerMenu {...props} />,
     })
 
 export default RootNav

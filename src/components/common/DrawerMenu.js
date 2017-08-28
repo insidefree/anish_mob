@@ -6,6 +6,7 @@ import { Col, Row, Grid } from 'react-native-easy-grid'
 
 export default class DrawerMenu extends Component {
     render() {
+        const { navigation } = this.props
         return (
             <View style={styles.container}>
                 <Grid>
@@ -14,13 +15,25 @@ export default class DrawerMenu extends Component {
                         <Col size={2} style={styles.menuUser} ><Text>SIGN IN / SIGN UP</Text></Col>
                     </Row>
                     <Row size={2}>
-                        <TouchableOpacity style={styles.menuItem} onPress={() => console.log('***')}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("AnimalListScreen")}>
                             <Text style={styles.menuItemText}>ANIMALS</Text>
                         </TouchableOpacity>
                     </Row>
-                    <Row style={styles.menuItem} size={2}><Text style={styles.menuItemText}>SHOPS</Text></Row>
-                    <Row style={styles.menuItem} size={2}><Text style={styles.menuItemText}>CLINICS</Text></Row>
-                    <Row style={styles.menuItem} size={2}><Text style={styles.menuItemText}>STUFF</Text></Row>
+                    <Row size={2}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("CorkScreen")}>
+                            <Text style={styles.menuItemText}>SHOPS</Text>
+                        </TouchableOpacity>
+                    </Row>
+                    <Row size={2}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("CorkScreen")}>
+                            <Text style={styles.menuItemText}>CLINICS</Text>
+                        </TouchableOpacity>
+                    </Row>
+                    <Row size={2}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("StuffScreen")}>
+                            <Text style={styles.menuItemText}>STUFF</Text>
+                        </TouchableOpacity>
+                    </Row>
                 </Grid>
             </View>
         )
