@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ListView, Image } from 'react-native'
+import { ListView, Image, StyleSheet, Platform } from 'react-native'
 import { connect } from 'react-redux'
 import { Container, Content, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
 // components
@@ -45,7 +45,7 @@ class AnimalList extends Component {
                 height: null
             }}>
                 <Container>
-                    <Header>
+                    <Header style={styles.header}>
                         <Left style={{ flex: 1 }} />
                         <Body style={{ flex: 1 }}>
                             <Title>Home Screen</Title>
@@ -78,3 +78,10 @@ const mapStateToProps = state => ({
 
 
 export default connect(mapStateToProps, { fetchAnimals })(AnimalList)
+
+
+const styles = StyleSheet.create({
+    header: {
+        paddingTop: (Platform.OS === 'android') ? 24 : 18,
+    }
+});

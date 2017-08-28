@@ -44,7 +44,7 @@ export default class DrawerMenu extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: (Platform.OS === 'android') ? 24 : 15,
+        paddingTop: (Platform.OS === 'android') ? 24 : 18,
     },
     menuHeader: {
         height: 100

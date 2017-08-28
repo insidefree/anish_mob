@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
-// import { View, Text, TextInput, ToastAndroid, Platform } from 'react-native'
-import { connectStyle, Button, Text, Icon, Container, Content, StyleProvider } from 'native-base';
+import { StyleSheet, View, Platform } from 'react-native'
+// import { Text } from 'react-native'
+import { connectStyle, Button, Text, Icon, Container, Content, StyleProvider, Header, Left, Body, Right, Title } from 'native-base';
 import getTheme from '../../../native-base-theme/components'
 import platform from '../../../native-base-theme/variables/platform'
 
@@ -42,6 +42,20 @@ export default class DataBaseActions extends Component {
         return (
             <StyleProvider style={getTheme(platform)}>
                 <Container>
+                    <Header>
+                        <Left style={{ flex: 1 }} />
+                        <Body style={{ flex: 1 }}>
+                            <Title>Home Screen</Title>
+                        </Body>
+                        <Right style={{ flex: 1 }}>
+                            <Button
+                                transparent
+                                onPress={() => this.props.navigation.navigate("DrawerOpen")}
+                            >
+                                <Icon name="menu" />
+                            </Button>
+                        </Right>
+                    </Header>
                     <Content padder>
                         <Button
                             blockAnish
@@ -70,7 +84,7 @@ export default class DataBaseActions extends Component {
                             iconLeft
                             onPress={() => this.props.navigation.navigate('AddFormScreen')}
                         >
-                            <Icon name='attach' style={{fontSize: 20, color: 'red'}}/>
+                            <Icon name='attach' style={{ fontSize: 20, color: 'red' }} />
                             <Text>Test: Add animal form</Text>
                         </Button>
                     </Content>
@@ -81,11 +95,17 @@ export default class DataBaseActions extends Component {
 }
 
 
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         backgroundColor: '#fff',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-// });
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#DBDAD6'
+    },
+    header: {
+        paddingTop: (Platform.OS === 'android') ? 24 : 18,
+    },
+    text: {
+        fontSize: 20,
+    }
+});
