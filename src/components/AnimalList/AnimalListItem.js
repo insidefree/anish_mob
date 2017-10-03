@@ -18,7 +18,7 @@ export class AnimalListItem extends Component {
                     </Left>
                 </CardItem>
                 <CardItem cardBody>
-                    <Image source={{ uri }} style={{ height: 200, width: null, flex: 1 }} />
+                    <Image source={{ uri: animal.images[0] }} style={{ height: 200, width: null, flex: 1 }} />
 
                 </CardItem>
                 <CardItem>
