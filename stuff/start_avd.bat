@@ -1,0 +1,1 @@
+START c:\Users\denys-s\AppData\Local\Android\sdk\emulator\emulator.exe -avd Nexus_5X_API_24
