@@ -1,6 +1,13 @@
 {
   "expo": {
     "sdkVersion": "20.0.0",
-    "slug": "anish"
+    "slug": "anish",
+    "android": {
+      "package": "org.bench.anish"
+    },
+    "loading": {
+      "icon": "./src/assets/menuButton.png",
+      "backgroundColor": "#e74c3c"
+    }
   }
 }
