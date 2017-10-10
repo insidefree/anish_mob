@@ -33,7 +33,7 @@ export default class App extends Component {
       online: true,
       isReady: false
     }
-    console.ignoredYellowBox = ['Setting timer']
+    console.ignoredYellowBox = ['Setting a timer']
   }
 
   async componentWillMount() {
