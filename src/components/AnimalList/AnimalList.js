@@ -62,7 +62,7 @@ class AnimalList extends Component {
                     <ListView style={{ flex: 1 }}
                         dataSource={ds.cloneWithRows(this.props.animalsList)}
                         renderRow={animal => <AnimalListItem animal={animal} />}
-
+                        enableEmptySections={true}
                     />
                 </Container>
             </Image>
