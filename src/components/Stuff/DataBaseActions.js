@@ -40,56 +40,38 @@ export default class DataBaseActions extends Component {
 
     render() {
         return (
-            <StyleProvider style={getTheme(platform)}>
-                <Container>
-                    <Header>
-                        <Left style={{ flex: 1 }} />
-                        <Body style={{ flex: 1 }}>
-                            <Title>Home Screen</Title>
-                        </Body>
-                        <Right style={{ flex: 1 }}>
-                            <Button
-                                transparent
-                                onPress={() => this.props.navigation.navigate("DrawerOpen")}
-                            >
-                                <Icon name="menu" />
-                            </Button>
-                        </Right>
-                    </Header>
-                    <Content padder>
-                        <Button
-                            blockAnish
-                            info
-                            onPress={() => this.onSubmit()}
-                        >
-                            <Text>Upload fake data to the server</Text>
-                        </Button>
-                        <Button
-                            blockAnish
-                            info
-                            onPress={() => this.onClear()}
-                        >
-                            <Text>Clear animals data</Text>
-                        </Button>
-                        <Button
-                            blockAnish
-                            info
-                            onPress={() => this.showAnimalsFromDB()}
-                        >
-                            <Text>Show animals from DB - console</Text>
-                        </Button>
-                        <Button
-                            blockAnish
-                            info
-                            iconLeft
-                            onPress={() => this.props.navigation.navigate('AddFormScreen')}
-                        >
-                            <Icon name='attach' style={{ fontSize: 20, color: 'red' }} />
-                            <Text>Test: Add animal form</Text>
-                        </Button>
-                    </Content>
-                </Container>
-            </StyleProvider>
+            <View style={styles.container}>
+                <Button
+                    blockAnish
+                    info
+                    onPress={() => this.onSubmit()}
+                >
+                    <Text>Upload fake data to the server</Text>
+                </Button>
+                <Button
+                    blockAnish
+                    info
+                    onPress={() => this.onClear()}
+                >
+                    <Text>Clear animals data</Text>
+                </Button>
+                <Button
+                    blockAnish
+                    info
+                    onPress={() => this.showAnimalsFromDB()}
+                >
+                    <Text>Show animals from DB - console</Text>
+                </Button>
+                <Button
+                    blockAnish
+                    info
+                    iconLeft
+                    onPress={() => this.props.navigation.navigate('AddFormScreen')}
+                >
+                    <Icon name='attach' style={{ fontSize: 20, color: 'red' }} />
+                    <Text>Test: Add animal form</Text>
+                </Button>
+            </View>
         )
     }
 }
@@ -99,7 +81,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#DBDAD6'
     },
     header: {
