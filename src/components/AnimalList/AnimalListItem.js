@@ -13,7 +13,7 @@ export class AnimalListItem extends Component {
                         <Thumbnail source={{ uri }} />
                         <Body>
                             <Text>{animal.name}</Text>
-                            <Text note>Age: {animal.age}</Text>
+                            <Text note>Age: {animal.age.str}</Text>
                         </Body>
                     </Left>
                 </CardItem>
