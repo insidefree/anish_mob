@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ListView, Image, StyleSheet, Platform } from 'react-native'
+import { ListView, Image, StyleSheet, Platform, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import { Container, Content, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
 // components
@@ -59,10 +59,10 @@ class AnimalList extends Component {
                             </Button>
                         </Right>
                     </Header>
-                    <ListView style={{ flex: 1 }}
-                        dataSource={ds.cloneWithRows(this.props.animalsList)}
-                        renderRow={animal => <AnimalListItem animal={animal} />}
-                        enableEmptySections={true}
+                    <FlatList style={{ flex: 1 }}
+                        data={this.props.animalsList}
+                        renderItem={({ item }) => <AnimalListItem animal={item} />}
+                        keyExtractor={item => item.id}
                     />
                 </Container>
             </Image>

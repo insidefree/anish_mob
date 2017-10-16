@@ -51,13 +51,6 @@ export default class DataBaseActions extends Component {
                 <Button
                     blockAnish
                     info
-                    onPress={() => this.onClear()}
-                >
-                    <Text>Clear animals data</Text>
-                </Button>
-                <Button
-                    blockAnish
-                    info
                     onPress={() => this.showAnimalsFromDB()}
                 >
                     <Text>Show animals from DB - console</Text>
