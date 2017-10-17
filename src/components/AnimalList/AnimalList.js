@@ -34,7 +34,7 @@ class AnimalList extends Component {
 
     render() {
         const { animalsList } = this.props
-        console.log('animalsList component: ', animalsList)
+        //console.log('animalsList component: ', animalsList)
         const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         // this.props.animalsList.on('value', snap => console.log('LIST2: ', snap))
         return (
