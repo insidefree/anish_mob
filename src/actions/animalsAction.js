@@ -20,8 +20,8 @@ export const fetchAnimals = () => {
       .on('value', snap => {
         let animalsList = []
         snap.forEach(animal => {
-          const { age, description, name, images, ...location } = animal.val()
-          animalsList.push({ age, description, name, images, location })
+          const { age, description, name, images, id } = animal.val()
+          animalsList.push({ age, description, name, images, id })
         });
         dispatch({ type: END_LOADING })
         //   const sortByDate = animals.sort(function(a, b) {
